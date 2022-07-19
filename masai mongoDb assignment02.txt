@@ -1,0 +1,847 @@
+Microsoft Windows [Version 10.0.10240]
+(c) 2015 Microsoft Corporation. All rights reserved.
+
+C:\Users\pc>mongosh
+Current Mongosh Log ID: 62d2ad5afb7fed7ea2cd222f
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.5.0
+Using MongoDB:          5.0.9
+Using Mongosh:          1.5.0
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2022-07-16T04:26:46.854-07:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+Warning: Found ~/.mongorc.js, but not ~/.mongoshrc.js. ~/.mongorc.js will not be loaded.
+  You may want to copy or rename ~/.mongorc.js to ~/.mongoshrc.js.
+test> use local
+switched to db local
+local> show collections
+cars
+employee_salary
+startup_log
+students_marks
+users
+local> db.users.find()
+[
+  {
+    _id: ObjectId("5dd6325382160722dc88eed0"),
+    name: 'Fritz Walczak',
+    gender: 'Male',
+    shirt_size: '2XL',
+    language: 'Malayalam'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eed1"),
+    name: 'Jimmy Jonin',
+    gender: 'Male',
+    shirt_size: 'M',
+    language: 'Malay'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eed2"),
+    name: 'Leia Raistrick',
+    gender: 'Female',
+    shirt_size: 'S',
+    language: 'Greek'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eed3"),
+    name: 'Titus Langlands',
+    gender: 'Male',
+    shirt_size: 'XS',
+    language: 'Kazakh'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eed4"),
+    name: 'Jerry Berkelay',
+    gender: 'Male',
+    shirt_size: '3XL',
+    language: 'Gagauz'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eed5"),
+    name: 'Agustin Sollett',
+    gender: 'Male',
+    shirt_size: 'L',
+    language: 'Burmese'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eed6"),
+    name: 'Jolynn Warnock',
+    gender: 'Female',
+    shirt_size: 'XS',
+    language: 'Norwegian'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eed7"),
+    name: 'Siouxie Saller',
+    gender: 'Female',
+    shirt_size: '2XL',
+    language: 'Korean'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eed8"),
+    name: 'Gregoor Tocher',
+    gender: 'Male',
+    shirt_size: 'M',
+    language: 'German'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eed9"),
+    name: 'Johnny Winwright',
+    gender: 'Male',
+    shirt_size: '3XL',
+    language: 'Georgian'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eeda"),
+    name: 'Gifford Francescozzi',
+    gender: 'Male',
+    shirt_size: '3XL',
+    language: 'Luxembourgish'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eedb"),
+    name: 'Kayle Stanger',
+    gender: 'Female',
+    shirt_size: 'M',
+    language: 'Azeri'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eedc"),
+    name: 'Madelina Elgar',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Oriya'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eedd"),
+    name: 'Tybalt Spensley',
+    gender: 'Male',
+    shirt_size: '2XL',
+    language: 'Montenegrin'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eede"),
+    name: 'Jackie Guyers',
+    gender: 'Male',
+    shirt_size: 'XL',
+    language: 'Haitian Creole'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eedf"),
+    name: 'Collin Feldmus',
+    gender: 'Male',
+    shirt_size: 'XL',
+    language: 'Quechua'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eee0"),
+    name: 'Annette Tomczykiewicz',
+    gender: 'Female',
+    shirt_size: 'L',
+    language: 'Macedonian'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eee1"),
+    name: 'Joete Tarborn',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'German'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eee2"),
+    name: 'Owen Passby',
+    gender: 'Male',
+    shirt_size: '3XL',
+    language: 'Romanian'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eee3"),
+    name: 'Arlena Baytrop',
+    gender: 'Female',
+    shirt_size: 'S',
+    language: 'Pashto'
+  }
+]
+Type "it" for more
+local> db.users.find({gender:"Female"})
+[
+  {
+    _id: ObjectId("5dd6325482160722dc88eed2"),
+    name: 'Leia Raistrick',
+    gender: 'Female',
+    shirt_size: 'S',
+    language: 'Greek'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eed6"),
+    name: 'Jolynn Warnock',
+    gender: 'Female',
+    shirt_size: 'XS',
+    language: 'Norwegian'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eed7"),
+    name: 'Siouxie Saller',
+    gender: 'Female',
+    shirt_size: '2XL',
+    language: 'Korean'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eedb"),
+    name: 'Kayle Stanger',
+    gender: 'Female',
+    shirt_size: 'M',
+    language: 'Azeri'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eedc"),
+    name: 'Madelina Elgar',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Oriya'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eee0"),
+    name: 'Annette Tomczykiewicz',
+    gender: 'Female',
+    shirt_size: 'L',
+    language: 'Macedonian'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eee1"),
+    name: 'Joete Tarborn',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'German'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eee3"),
+    name: 'Arlena Baytrop',
+    gender: 'Female',
+    shirt_size: 'S',
+    language: 'Pashto'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eee4"),
+    name: 'Keeley Lyfe',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Hungarian'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eee5"),
+    name: 'Ciel Yaus',
+    gender: 'Female',
+    shirt_size: 'XS',
+    language: 'Moldovan'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eee7"),
+    name: 'Darsey Philbrick',
+    gender: 'Female',
+    shirt_size: '3XL',
+    language: 'Montenegrin'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eeeb"),
+    name: 'Agathe Roskeilly',
+    gender: 'Female',
+    shirt_size: '2XL',
+    language: 'Dutch'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eeec"),
+    name: 'Lonna Kersting',
+    gender: 'Female',
+    shirt_size: 'L',
+    language: 'Swedish'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eeed"),
+    name: 'Shani Risson',
+    gender: 'Female',
+    shirt_size: '2XL',
+    language: 'Quechua'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eef5"),
+    name: 'Elane Ludwikiewicz',
+    gender: 'Female',
+    shirt_size: '3XL',
+    language: 'Gagauz'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eefa"),
+    name: 'Brittni McGaughay',
+    gender: 'Female',
+    shirt_size: '2XL',
+    language: 'Somali'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eefb"),
+    name: 'Sosanna Ellins',
+    gender: 'Female',
+    shirt_size: 'M',
+    language: 'Telugu'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eefc"),
+    name: 'Viole Farnell',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Bislama'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eefe"),
+    name: 'Cory Gilbertson',
+    gender: 'Female',
+    shirt_size: 'L',
+    language: 'Albanian'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eeff"),
+    name: 'Candice Brayne',
+    gender: 'Female',
+    shirt_size: 'L',
+    language: 'Albanian'
+  }
+]
+Type "it" for more
+local> db.users.find({gender:"Female",language:"Kannada","Hindi"})
+Uncaught:
+SyntaxError: Unexpected token (1:57)
+
+> 1 | db.users.find({gender:"Female",language:"Kannada","Hindi"})
+    |                                                          ^
+  2 |
+
+local> db.users.find({gender:"Female"},{language:{$in:["Kannada","Hindi"]}})
+MongoServerError: $in requires an array as a second argument, found: string
+local> db.users.find({gender:"Female",language:"Kannada"}
+... )
+[
+  {
+    _id: ObjectId("5dd6325482160722dc88efd7"),
+    name: 'Aubree Philimore',
+    gender: 'Female',
+    shirt_size: 'XS',
+    language: 'Kannada'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f1d1"),
+    name: 'May Amsberger',
+    gender: 'Female',
+    shirt_size: 'L',
+    language: 'Kannada'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f213"),
+    name: 'Athena Tenny',
+    gender: 'Female',
+    shirt_size: 'M',
+    language: 'Kannada'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f245"),
+    name: 'Michaeline Zum Felde',
+    gender: 'Female',
+    shirt_size: 'XS',
+    language: 'Kannada'
+  }
+]
+local> db.users.find({$or:[{"gender
+Uncaught:
+SyntaxError: Unterminated string constant. (1:21)
+
+> 1 | db.users.find({$or:[{"gender
+    |                      ^
+  2 |
+
+local> db.users.find({$or:[{gender:"male",language:"Hindi"},{gender:"Female", language:"Kannada"}]})
+[
+  {
+    _id: ObjectId("5dd6325482160722dc88efd7"),
+    name: 'Aubree Philimore',
+    gender: 'Female',
+    shirt_size: 'XS',
+    language: 'Kannada'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f1d1"),
+    name: 'May Amsberger',
+    gender: 'Female',
+    shirt_size: 'L',
+    language: 'Kannada'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f213"),
+    name: 'Athena Tenny',
+    gender: 'Female',
+    shirt_size: 'M',
+    language: 'Kannada'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f245"),
+    name: 'Michaeline Zum Felde',
+    gender: 'Female',
+    shirt_size: 'XS',
+    language: 'Kannada'
+  }
+]
+local> db.users.find({gender:"Female",shirt_size:"XL"})
+[
+  {
+    _id: ObjectId("5dd6325482160722dc88eedc"),
+    name: 'Madelina Elgar',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Oriya'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eee1"),
+    name: 'Joete Tarborn',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'German'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eee4"),
+    name: 'Keeley Lyfe',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Hungarian'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88eefc"),
+    name: 'Viole Farnell',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Bislama'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88ef01"),
+    name: 'Misha Parradine',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Lao'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88ef0a"),
+    name: 'Deloris Willmer',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Dhivehi'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88ef22"),
+    name: 'Adiana Vise',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Belarusian'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88ef27"),
+    name: 'Addie Michieli',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Romanian'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88ef28"),
+    name: "Jannelle D'Alesio",
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Tetum'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88ef30"),
+    name: 'Rennie Dilger',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Assamese'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88ef3d"),
+    name: 'Lib Dybbe',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Tok Pisin'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88ef50"),
+    name: 'Maiga Garatty',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Khmer'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88ef54"),
+    name: 'Vivie Evill',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Japanese'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88ef62"),
+    name: 'Jacquelyn Rochell',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Tok Pisin'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88ef6a"),
+    name: 'Biddie Bromwich',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Malagasy'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88ef76"),
+    name: 'Francyne Bulled',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'French'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88ef78"),
+    name: 'Frannie Uzielli',
+local>
+
+local> db.users.find({$or:[{gender:"Male",language:"English"},{gender:"Female",language:"Hindi"}])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:90)
+
+> 1 | db.users.find({$or:[{gender:"Male",language:"English"},{gender:"Female",language:"Hindi"}])
+    |                                                                                           ^
+  2 |
+
+local> db.users.find({$or:[{gender:"Male",language:"English"},{gender:"Female",language:"Hindi"}]})
+[
+  {
+    _id: ObjectId("5dd6325482160722dc88ef04"),
+    name: 'Glynis Gallifont',
+    gender: 'Female',
+    shirt_size: '2XL',
+    language: 'Hindi'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88efb5"),
+    name: 'Tiler Bowes',
+    gender: 'Male',
+    shirt_size: '3XL',
+    language: 'English'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f0d3"),
+    name: 'Salomone Dukesbury',
+    gender: 'Male',
+    shirt_size: 'L',
+    language: 'English'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f119"),
+    name: 'Sonya Lisciardelli',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Hindi'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f144"),
+    name: 'Murdoch Hurrion',
+    gender: 'Male',
+    shirt_size: 'M',
+    language: 'English'
+  }
+]
+local> db.users.find({$or:[{gender:"Male",$or:[{language:"Hindi"},{language:"English"}]},{gender:"Female",$or:[{language:"Kannada"},{language:"German"}]}]})
+[
+  {
+    _id: ObjectId("5dd6325482160722dc88eee1"),
+    name: 'Joete Tarborn',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'German'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88ef2e"),
+    name: 'Pam Peatt',
+    gender: 'Female',
+    shirt_size: '2XL',
+    language: 'German'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88efb5"),
+    name: 'Tiler Bowes',
+    gender: 'Male',
+    shirt_size: '3XL',
+    language: 'English'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88efd7"),
+    name: 'Aubree Philimore',
+    gender: 'Female',
+    shirt_size: 'XS',
+    language: 'Kannada'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f097"),
+    name: 'Kevyn Glaister',
+    gender: 'Female',
+    shirt_size: 'S',
+    language: 'German'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f0d3"),
+    name: 'Salomone Dukesbury',
+    gender: 'Male',
+    shirt_size: 'L',
+    language: 'English'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f144"),
+    name: 'Murdoch Hurrion',
+    gender: 'Male',
+    shirt_size: 'M',
+    language: 'English'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f1d1"),
+    name: 'May Amsberger',
+    gender: 'Female',
+    shirt_size: 'L',
+    language: 'Kannada'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f213"),
+    name: 'Athena Tenny',
+    gender: 'Female',
+    shirt_size: 'M',
+    language: 'Kannada'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f219"),
+    name: 'Garrek Davidy',
+    gender: 'Male',
+    shirt_size: '2XL',
+    language: 'Hindi'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f245"),
+    name: 'Michaeline Zum Felde',
+    gender: 'Female',
+    shirt_size: 'XS',
+    language: 'Kannada'
+  }
+]
+local> db.users.find({$or:[{gender:"Male",language:"German",$or:[{shirt_size:"L"},{shirt_size:"M"}]},{gender:"Female",language:"Bengali",shirt_size:"XL"}]})
+[
+  {
+    _id: ObjectId("5dd6325482160722dc88eed8"),
+    name: 'Gregoor Tocher',
+    gender: 'Male',
+    shirt_size: 'M',
+    language: 'German'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f078"),
+    name: 'Thurstan Pillans',
+    gender: 'Male',
+    shirt_size: 'L',
+    language: 'German'
+  }
+]
+local> db.users.find({gender:"Female",$or:[{language:"Hindi",language:"Punjabi",{language:"Bengali"},{language:"Gujarati"},{language:"Tamil"},{language:"Malayalam"}}
+Uncaught:
+SyntaxError: Unexpected token (1:73)
+
+> 1 | db.users.find({gender:"Female",$or:[{language:"Hindi",language:"Punjabi",{language:"Bengali"},{language:"Gujarati"},{language:"Tamil"},{language:"Malayalam"}}
+    |                                                                          ^
+  2 |
+
+local> db.users.find({$or:[{gender:"Male",language:"German",$or:[{shirt_size:"L"},{shirt_size:"M"}},{gender:"Female",language:"Bengali",shirt_size:"XL"}]})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:91)
+
+> 1 | db.users.find({$or:[{gender:"Male",language:"German",$or:[{shirt_size:"L"},{shirt_size:"M"}},{gender:"Female",language:"Bengali",shirt_size:"XL"}]})
+    |                                                                                            ^
+  2 |
+
+local> db.users.find({$or:[{gender:"Male",language:"German",$or:[{shirt_size:"L"},{shirt_size:"M"}},{gender:"Female",language:"Bengali",shirt_size:"XL"}]})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:91)
+
+> 1 | db.users.find({$or:[{gender:"Male",language:"German",$or:[{shirt_size:"L"},{shirt_size:"M"}},{gender:"Female",language:"Bengali",shirt_size:"XL"}]})
+    |                                                                                            ^
+  2 |
+
+local> db.users.find({gender:"Female",$or:[{language:"Punjabi"},{language:"Hindi"},{language:"Malayalam"},{language:"Bengali"},{language:"Tamil"}]})
+[
+  {
+    _id: ObjectId("5dd6325482160722dc88ef04"),
+    name: 'Glynis Gallifont',
+    gender: 'Female',
+    shirt_size: '2XL',
+    language: 'Hindi'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88ef10"),
+    name: 'Viva Cann',
+    gender: 'Female',
+    shirt_size: 'S',
+    language: 'Tamil'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88ef99"),
+    name: 'Maure Thunderman',
+    gender: 'Female',
+    shirt_size: '2XL',
+    language: 'Tamil'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88efd4"),
+    name: 'Eve Turley',
+    gender: 'Female',
+    shirt_size: 'M',
+    language: 'Bengali'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f02c"),
+    name: 'Kimmy Zoephel',
+    gender: 'Female',
+    shirt_size: 'S',
+    language: 'Tamil'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f03f"),
+    name: 'Emily Petras',
+    gender: 'Female',
+    shirt_size: '2XL',
+    language: 'Tamil'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f0c4"),
+    name: 'Dorian Goodhand',
+    gender: 'Female',
+    shirt_size: 'S',
+    language: 'Bengali'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f0c5"),
+    name: 'Hollyanne Selesnick',
+    gender: 'Female',
+    shirt_size: '3XL',
+    language: 'Malayalam'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f0f7"),
+    name: 'Ivette Eley',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Tamil'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f119"),
+    name: 'Sonya Lisciardelli',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Hindi'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f120"),
+    name: 'Yolande Domenichelli',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Tamil'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f15a"),
+    name: 'Almeta Hasluck',
+    gender: 'Female',
+    shirt_size: 'M',
+    language: 'Bengali'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f198"),
+    name: 'Arlena Bustin',
+    gender: 'Female',
+    shirt_size: '2XL',
+    language: 'Malayalam'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f1cc"),
+    name: 'Leslie Isted',
+    gender: 'Female',
+    shirt_size: 'XS',
+    language: 'Malayalam'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f1dd"),
+    name: 'Tilly Goldfinch',
+    gender: 'Female',
+    shirt_size: 'XS',
+    language: 'Malayalam'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f1e0"),
+    name: 'Dot Pawels',
+    gender: 'Female',
+    shirt_size: 'XL',
+    language: 'Tamil'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f257"),
+    name: 'Kara-lynn Moncarr',
+    gender: 'Female',
+    shirt_size: 'L',
+    language: 'Punjabi'
+  }
+]
+local> db.users.find({gender:"Male",language:"Korean"})
+[
+  {
+    _id: ObjectId("5dd6325482160722dc88ef7d"),
+    name: 'Briano Poxson',
+    gender: 'Male',
+    shirt_size: 'M',
+    language: 'Korean'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88ef8a"),
+    name: 'Hastings Domniney',
+    gender: 'Male',
+    shirt_size: 'L',
+    language: 'Korean'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f10a"),
+    name: 'Isaac Mc Andrew',
+    gender: 'Male',
+    shirt_size: '2XL',
+    language: 'Korean'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f16e"),
+    name: 'Silvano Spurling',
+    gender: 'Male',
+    shirt_size: 'L',
+    language: 'Korean'
+  }
+]
+local>

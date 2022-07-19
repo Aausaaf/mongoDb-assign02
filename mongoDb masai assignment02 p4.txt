@@ -1,0 +1,1069 @@
+Microsoft Windows [Version 10.0.10240]
+(c) 2015 Microsoft Corporation. All rights reserved.
+
+C:\Users\pc>mongosh
+Current Mongosh Log ID: 62d2d99bae96d2fcd3db4cdd
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.5.0
+Using MongoDB:          5.0.9
+Using Mongosh:          1.5.0
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2022-07-16T07:17:54.958-07:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+Warning: Found ~/.mongorc.js, but not ~/.mongoshrc.js. ~/.mongorc.js will not be loaded.
+  You may want to copy or rename ~/.mongorc.js to ~/.mongoshrc.js.
+test> use local
+switched to db local
+local> db collections
+Uncaught:
+SyntaxError: Missing semicolon. (1:2)
+
+> 1 | db collections
+    |   ^
+  2 |
+
+local> show collections
+cars
+employee_salary
+startup_log
+students_marks
+users
+local> db.employee_salary.find()
+[
+  {
+    _id: ObjectId("5ddb87530ff16dc27fa2c0ed"),
+    name: 'Erinn Alfonsetti',
+    gender: 'Female',
+    company: 'Meemm',
+    department: 'Business Development',
+    salary: 1788329
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0ee"),
+    name: 'Rossy Leven',
+    gender: 'Male',
+    company: 'Latz',
+    department: 'Training',
+    salary: 2102761
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0ef"),
+    name: "Kendall O'Scannill",
+    gender: 'Male',
+    company: 'Zoovu',
+    department: 'Training',
+    salary: 1124401
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0f0"),
+    name: 'Berri Denton',
+    gender: 'Female',
+    company: 'Yakidoo',
+    department: 'Services',
+    salary: 1117362
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0f1"),
+    name: 'Sayer Jado',
+    gender: 'Male',
+    company: 'Yozio',
+    department: 'Accounting',
+    salary: 1527605
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0f2"),
+    name: 'Kevon Fort',
+    gender: 'Male',
+    company: 'Avamm',
+    department: 'Marketing',
+    salary: 2354338
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0f3"),
+    name: 'Otha Torresi',
+    gender: 'Female',
+    company: 'Shufflebeat',
+    department: 'Business Development',
+    salary: 2686113
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0f4"),
+    name: 'Jacynth Hinchon',
+    gender: 'Female',
+    company: 'Fivebridge',
+    department: 'Research and Development',
+    salary: 1667138
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0f5"),
+    name: 'Gerardo Bernli',
+    gender: 'Male',
+    company: 'Youspan',
+    department: 'Accounting',
+    salary: 606479
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0f6"),
+    name: 'Frederica Poulsum',
+    gender: 'Female',
+    company: 'Kwilith',
+    department: 'Support',
+    salary: 437975
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0f7"),
+    name: 'Alice Seeborne',
+    gender: 'Female',
+    company: 'Devbug',
+    department: 'Marketing',
+    salary: 2207425
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0f8"),
+    name: 'Leroi Jerche',
+    gender: 'Male',
+    company: 'Mycat',
+    department: 'Engineering',
+    salary: 2035560
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0f9"),
+    name: 'Irina Dmitrienko',
+    gender: 'Female',
+    company: 'Flipbug',
+    department: 'Services',
+    salary: 2626630
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0fa"),
+    name: 'Meier Samson',
+    gender: 'Male',
+    company: 'Zoombeat',
+    department: 'Engineering',
+    salary: 300164
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0fb"),
+    name: 'Darn Posselt',
+    gender: 'Male',
+    company: 'Meevee',
+    department: 'Business Development',
+    salary: 193700
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0fc"),
+    name: 'Devondra Coventry',
+    gender: 'Female',
+    company: 'DabZ',
+    department: 'Human Resources',
+    salary: 108073
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0fd"),
+    name: 'Felipa Hollebon',
+    gender: 'Female',
+    company: 'Yabox',
+    department: 'Accounting',
+    salary: 111362
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0fe"),
+    name: 'Ebba Zanini',
+    gender: 'Female',
+    company: 'Mudo',
+    department: 'Services',
+    salary: 1406012
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0ff"),
+    name: 'Jackquelin Issakov',
+    gender: 'Female',
+    company: 'Gigazoom',
+    department: 'Training',
+    salary: 2500352
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c100"),
+    name: 'Doug Isakowicz',
+    gender: 'Male',
+    company: 'Quinu',
+    department: 'Human Resources',
+    salary: 2436058
+  }
+]
+Type "it" for more
+local> db.employee_salary.find({gender:"male",department:"Engineering"})
+
+local> db.employee_salary.find({gender:"Male",department:"Engineering"})
+[
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0f8"),
+    name: 'Leroi Jerche',
+    gender: 'Male',
+    company: 'Mycat',
+    department: 'Engineering',
+    salary: 2035560
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0fa"),
+    name: 'Meier Samson',
+    gender: 'Male',
+    company: 'Zoombeat',
+    department: 'Engineering',
+    salary: 300164
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c13a"),
+    name: 'Lynn Gave',
+    gender: 'Male',
+    company: 'Jabbersphere',
+    department: 'Engineering',
+    salary: 2470206
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c14a"),
+    name: 'Griffie Screech',
+    gender: 'Male',
+    company: 'Janyx',
+    department: 'Engineering',
+    salary: 1928055
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c1d1"),
+    name: 'Iago Lenihan',
+    gender: 'Male',
+    company: 'Innotype',
+    department: 'Engineering',
+    salary: 1138498
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c1dd"),
+    name: 'Gilles Shakspeare',
+    gender: 'Male',
+    company: 'Voonix',
+    department: 'Engineering',
+    salary: 455954
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c1ec"),
+    name: 'Clay Ribchester',
+    gender: 'Male',
+    company: 'Kwimbee',
+    department: 'Engineering',
+    salary: 2825928
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c204"),
+    name: 'Gordie Fydoe',
+    gender: 'Male',
+    company: 'Aimbu',
+    department: 'Engineering',
+    salary: 1348020
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c207"),
+    name: 'Hartley Tyre',
+    gender: 'Male',
+    company: 'Edgeify',
+    department: 'Engineering',
+    salary: 1954802
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c21c"),
+    name: 'Thedric Pannett',
+    gender: 'Male',
+    company: 'Talane',
+    department: 'Engineering',
+    salary: 463985
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c223"),
+    name: 'Estevan Doy',
+    gender: 'Male',
+    company: 'Riffwire',
+    department: 'Engineering',
+    salary: 616885
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c227"),
+    name: 'Massimo Iglesia',
+    gender: 'Male',
+    company: 'Wikido',
+    department: 'Engineering',
+    salary: 648410
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c23f"),
+    name: 'Barret Sill',
+    gender: 'Male',
+    company: 'Yadel',
+    department: 'Engineering',
+    salary: 1514340
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c250"),
+    name: 'Elliot Ridulfo',
+    gender: 'Male',
+    company: 'Vinder',
+    department: 'Engineering',
+    salary: 2986581
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c253"),
+    name: 'Noll Potier',
+    gender: 'Male',
+    company: 'Blogtags',
+    department: 'Engineering',
+    salary: 1903164
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c258"),
+    name: 'Theodor Fairrie',
+    gender: 'Male',
+    company: 'Blogtag',
+    department: 'Engineering',
+    salary: 298701
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c28b"),
+    name: 'Morie Cogan',
+    gender: 'Male',
+    company: 'Thoughtstorm',
+    department: 'Engineering',
+    salary: 2148501
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c28c"),
+    name: 'Alwyn Flieg',
+    gender: 'Male',
+    company: 'Kaymbo',
+    department: 'Engineering',
+    salary: 1374993
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c2a7"),
+    name: 'Brig Eschalette',
+    gender: 'Male',
+    company: 'Dablist',
+    department: 'Engineering',
+    salary: 2840500
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c2dc"),
+    name: 'Cirstoforo Pebworth',
+    gender: 'Male',
+    company: 'Reallinks',
+    department: 'Engineering',
+    salary: 503111
+  }
+]
+Type "it" for more
+local> db.employee_salary.find({gender:"Male",department:"Engineering"}).count()
+43
+local> db.employee_salary.find({gender:"Female",department:"Engineering"},salary:{$lt:1000000).count()
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:73)
+
+> 1 | db.employee_salary.find({gender:"Female",department:"Engineering"},salary:{$lt:1000000).count()
+    |                                                                          ^
+  2 |
+
+local> db.employee_salary.find({gender:"Female",department:"Engineering"},salary:{$lt:1000000}}).count()
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:73)
+
+> 1 | db.employee_salary.find({gender:"Female",department:"Engineering"},salary:{$lt:1000000}}).count()
+    |                                                                          ^
+  2 |
+
+local> db.employee_salary.find({gender:"Female",department:"Engineering",salary:{$lt:1000000}}).count()
+12
+local> db.employee_salary.find({salary:{$lt:80000}}).count()
+9
+local> db.employee_salary.find({salary:{$lt:80000}}).limit(10)
+[
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c22b"),
+    name: 'Jobyna Josselsohn',
+    gender: 'Female',
+    company: 'Skiba',
+    department: 'Services',
+    salary: 61212
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c291"),
+    name: 'Leodora McMennum',
+    gender: 'Female',
+    company: 'Zoozzy',
+    department: 'Training',
+    salary: 66193
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c313"),
+    name: 'Audre Leiden',
+    gender: 'Female',
+    company: 'Wikivu',
+    department: 'Training',
+    salary: 76667
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c368"),
+    name: 'Evangeline Boothroyd',
+    gender: 'Female',
+    company: 'Feedmix',
+    department: 'Product Management',
+    salary: 78092
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c38b"),
+    name: 'Helena Sparham',
+    gender: 'Female',
+    company: 'Edgewire',
+    department: 'Training',
+    salary: 67618
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c425"),
+    name: 'Clerkclaude Drexel',
+    gender: 'Male',
+    company: 'Youspan',
+    department: 'Human Resources',
+    salary: 69590
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c469"),
+    name: 'Gennie Ramos',
+    gender: 'Female',
+    company: 'Devcast',
+    department: 'Engineering',
+    salary: 71835
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c48c"),
+    name: 'Burl Butterwick',
+    gender: 'Male',
+    company: 'Latz',
+    department: 'Services',
+    salary: 65423
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c4c0"),
+    name: 'Papageno Pigny',
+    gender: 'Male',
+    company: 'Vimbo',
+    department: 'Human Resources',
+    salary: 72152
+  }
+]
+local> db.employee_salary.find({gender:"Male"}).sort({salary:1}).limit(10)
+[
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c48c"),
+    name: 'Burl Butterwick',
+    gender: 'Male',
+    company: 'Latz',
+    department: 'Services',
+    salary: 65423
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c425"),
+    name: 'Clerkclaude Drexel',
+    gender: 'Male',
+    company: 'Youspan',
+    department: 'Human Resources',
+    salary: 69590
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c4c0"),
+    name: 'Papageno Pigny',
+    gender: 'Male',
+    company: 'Vimbo',
+    department: 'Human Resources',
+    salary: 72152
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c43a"),
+    name: 'Myer Goddman',
+    gender: 'Male',
+    company: 'Babbleopia',
+    department: 'Marketing',
+    salary: 81552
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c187"),
+    name: 'Rowney Matthiae',
+    gender: 'Male',
+    company: 'Devpoint',
+    department: 'Legal',
+    salary: 88963
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c299"),
+    name: 'Harwell Tong',
+    gender: 'Male',
+    company: 'Quamba',
+    department: 'Legal',
+    salary: 94740
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c28f"),
+    name: 'Tyson Tarbath',
+    gender: 'Male',
+    company: 'Meetz',
+    department: 'Services',
+    salary: 100767
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c38c"),
+    name: 'Rossy Slyne',
+    gender: 'Male',
+    company: 'Fliptune',
+    department: 'Marketing',
+    salary: 101840
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c1e3"),
+    name: 'Buddy Brickwood',
+    gender: 'Male',
+    company: 'Oyondu',
+    department: 'Services',
+    salary: 106209
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c496"),
+    name: 'Quillan Allbrook',
+    gender: 'Male',
+    company: 'Browsecat',
+    department: 'Research and Development',
+    salary: 110608
+  }
+]
+local> db.employee_salary.find({gender:"Female"}).sort({salary:-1}).limit(10)
+[
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c473"),
+    name: 'Cordi Trump',
+    gender: 'Female',
+    company: 'Devbug',
+    department: 'Sales',
+    salary: 2994811
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c441"),
+    name: 'Leila Priter',
+    gender: 'Female',
+    company: 'Fliptune',
+    department: 'Sales',
+    salary: 2994370
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c2b1"),
+    name: 'Caitlin Gregorowicz',
+    gender: 'Female',
+    company: 'Dabshots',
+    department: 'Marketing',
+    salary: 2992134
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c4d2"),
+    name: 'Janel Tiebe',
+    gender: 'Female',
+    company: 'Youspan',
+    department: 'Human Resources',
+    salary: 2985199
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c15b"),
+    name: 'Lyda Mungham',
+    gender: 'Female',
+    company: 'Demivee',
+    department: 'Sales',
+    salary: 2977166
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c360"),
+    name: 'Iris Andres',
+    gender: 'Female',
+    company: 'Wikibox',
+    department: 'Product Management',
+    salary: 2958682
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c326"),
+    name: 'Carmelle Larkings',
+    gender: 'Female',
+    company: 'Zoonoodle',
+    department: 'Accounting',
+    salary: 2956595
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c3cf"),
+    name: 'Roxanna Dean',
+    gender: 'Female',
+    company: 'Yakidoo',
+    department: 'Legal',
+    salary: 2951183
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c3fa"),
+    name: 'Gerti Blakebrough',
+    gender: 'Female',
+    company: 'Trilia',
+    department: 'Accounting',
+    salary: 2943648
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c102"),
+    name: 'Denny La Croce',
+    gender: 'Female',
+    company: 'Tanoodle',
+    department: 'Engineering',
+    salary: 2941726
+  }
+]
+local> db.employee_salary.find({gender:"Female"}).sort({salary:-1}).limit(1)
+[
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c473"),
+    name: 'Cordi Trump',
+    gender: 'Female',
+    company: 'Devbug',
+    department: 'Sales',
+    salary: 2994811
+  }
+]
+local> db.employee_salary.find({gender:"Male",department:"Engineering"}).sort({salary:1}).limit(5)
+[
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c430"),
+    name: 'Jud Hawkwood',
+    gender: 'Male',
+    company: 'Buzzster',
+    department: 'Engineering',
+    salary: 254678
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c258"),
+    name: 'Theodor Fairrie',
+    gender: 'Male',
+    company: 'Blogtag',
+    department: 'Engineering',
+    salary: 298701
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c0fa"),
+    name: 'Meier Samson',
+    gender: 'Male',
+    company: 'Zoombeat',
+    department: 'Engineering',
+    salary: 300164
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c4af"),
+    name: 'Javier Baulk',
+    gender: 'Male',
+    company: 'Dazzlesphere',
+    department: 'Engineering',
+    salary: 319702
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c1dd"),
+    name: 'Gilles Shakspeare',
+    gender: 'Male',
+    company: 'Voonix',
+    department: 'Engineering',
+    salary: 455954
+  }
+]
+local> db.employee_salary.find({gender:"Male",department:"Engineering"}).sort({salary:-1}).limit(5)
+[
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c250"),
+    name: 'Elliot Ridulfo',
+    gender: 'Male',
+    company: 'Vinder',
+    department: 'Engineering',
+    salary: 2986581
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c37b"),
+    name: 'Greg Vasentsov',
+    gender: 'Male',
+    company: 'Jatri',
+    department: 'Engineering',
+    salary: 2979654
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c2a7"),
+    name: 'Brig Eschalette',
+    gender: 'Male',
+    company: 'Dablist',
+    department: 'Engineering',
+    salary: 2840500
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c1ec"),
+    name: 'Clay Ribchester',
+    gender: 'Male',
+    company: 'Kwimbee',
+    department: 'Engineering',
+    salary: 2825928
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c472"),
+    name: 'Dewain Walsham',
+    gender: 'Male',
+    company: 'Livetube',
+    department: 'Engineering',
+    salary: 2733112
+  }
+]
+local> db.employee_salary.find({gender:"Female",department:"Engineering"}).sort({salary:-1}).limit(50)
+[
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c102"),
+    name: 'Denny La Croce',
+    gender: 'Female',
+    company: 'Tanoodle',
+    department: 'Engineering',
+    salary: 2941726
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c218"),
+    name: 'Roze Nineham',
+    gender: 'Female',
+    company: 'Agimba',
+    department: 'Engineering',
+    salary: 2895593
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c15a"),
+    name: 'Agatha Blanche',
+    gender: 'Female',
+    company: 'Zoomzone',
+    department: 'Engineering',
+    salary: 2877054
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c2ef"),
+    name: 'Cyndy Legerton',
+    gender: 'Female',
+    company: 'Janyx',
+    department: 'Engineering',
+    salary: 2812130
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c14b"),
+    name: 'Zandra Colaton',
+    gender: 'Female',
+    company: 'Jazzy',
+    department: 'Engineering',
+    salary: 2763254
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c1b7"),
+    name: 'Janey Bullon',
+    gender: 'Female',
+    company: 'Demizz',
+    department: 'Engineering',
+    salary: 2526993
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c298"),
+    name: 'Rhianna Gerdts',
+    gender: 'Female',
+    company: 'Divanoodle',
+    department: 'Engineering',
+    salary: 2500304
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c345"),
+    name: 'Georgianna Leer',
+    gender: 'Female',
+    company: 'Realmix',
+    department: 'Engineering',
+    salary: 2441524
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c3ff"),
+    name: 'Trula Sheilds',
+    gender: 'Female',
+    company: 'Tambee',
+    department: 'Engineering',
+    salary: 2387870
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c3c7"),
+    name: 'Meredith Fritche',
+    gender: 'Female',
+    company: 'Demizz',
+    department: 'Engineering',
+    salary: 2319464
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c25a"),
+    name: 'Sybil Murney',
+    gender: 'Female',
+    company: 'Eazzy',
+    department: 'Engineering',
+    salary: 2293107
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c3a8"),
+    name: 'Robbi Melendez',
+    gender: 'Female',
+    company: 'Reallinks',
+    department: 'Engineering',
+    salary: 2214764
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c376"),
+    name: 'Rochette Hischke',
+    gender: 'Female',
+    company: 'Skinder',
+    department: 'Engineering',
+    salary: 2178858
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c1f0"),
+    name: 'Siusan Wathen',
+    gender: 'Female',
+    company: 'Devpulse',
+    department: 'Engineering',
+    salary: 2083121
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c181"),
+    name: 'Druci MacTavish',
+    gender: 'Female',
+    company: 'Zoonder',
+    department: 'Engineering',
+    salary: 2054268
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c319"),
+    name: 'Helen Findlow',
+    gender: 'Female',
+    company: 'Quamba',
+    department: 'Engineering',
+    salary: 1995771
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c35a"),
+    name: 'Carmella Pachta',
+    gender: 'Female',
+    company: 'Fivebridge',
+    department: 'Engineering',
+    salary: 1988297
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c2e2"),
+    name: 'Ruby Fairfoull',
+    gender: 'Female',
+    company: 'Eayo',
+    department: 'Engineering',
+    salary: 1939724
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c2f1"),
+    name: 'Raquel Ludye',
+    gender: 'Female',
+    company: 'Skyndu',
+    department: 'Engineering',
+    salary: 1938990
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c2e9"),
+    name: 'Bambi Filewood',
+    gender: 'Female',
+    company: 'Mybuzz',
+    department: 'Engineering',
+    salary: 1903314
+  }
+]
+Type "it" for more
+local> db.employee_salary.find({gender:"Male",department:"Human resources"}).sort({salary:1}).limit(50)
+
+local> db.employee_salary.find({gender:"Male",department:"Human Resources"}).sort({salary:1}).limit(50)
+[
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c425"),
+    name: 'Clerkclaude Drexel',
+    gender: 'Male',
+    company: 'Youspan',
+    department: 'Human Resources',
+    salary: 69590
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c4c0"),
+    name: 'Papageno Pigny',
+    gender: 'Male',
+    company: 'Vimbo',
+    department: 'Human Resources',
+    salary: 72152
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c208"),
+    name: 'Bobby Kernan',
+    gender: 'Male',
+    company: 'Fivebridge',
+    department: 'Human Resources',
+    salary: 128211
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c2cf"),
+    name: 'Huey Hanshaw',
+    gender: 'Male',
+    company: 'Eabox',
+    department: 'Human Resources',
+    salary: 268760
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c3be"),
+    name: 'Gaylor Kissock',
+    gender: 'Male',
+    company: 'Realcube',
+    department: 'Human Resources',
+    salary: 364950
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c154"),
+    name: 'Tannie MacAnulty',
+    gender: 'Male',
+    company: 'Skynoodle',
+    department: 'Human Resources',
+    salary: 418651
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c18b"),
+    name: 'Raimundo Hanratty',
+    gender: 'Male',
+    company: 'JumpXS',
+    department: 'Human Resources',
+    salary: 474760
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c484"),
+    name: 'Bern McVitie',
+    gender: 'Male',
+    company: 'Npath',
+    department: 'Human Resources',
+    salary: 502338
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c1c3"),
+    name: 'Devin Glendining',
+    gender: 'Male',
+    company: 'Voomm',
+    department: 'Human Resources',
+    salary: 519409
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c448"),
+    name: 'Ephraim Bradshaw',
+    gender: 'Male',
+    company: 'Yadel',
+    department: 'Human Resources',
+    salary: 600782
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c4b1"),
+    name: 'Bond Lauthian',
+    gender: 'Male',
+    company: 'Miboo',
+    department: 'Human Resources',
+    salary: 665121
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c114"),
+    name: 'Rob Kings',
+    gender: 'Male',
+    company: 'Realmix',
+    department: 'Human Resources',
+    salary: 720872
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c2a3"),
+    name: 'Sherlocke Gorst',
+    gender: 'Male',
+    company: 'Fivespan',
+    department: 'Human Resources',
+    salary: 727101
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c301"),
+    name: 'Tadio Elmer',
+    gender: 'Male',
+    company: 'Flipbug',
+    department: 'Human Resources',
+    salary: 798037
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c16d"),
+    name: 'Thayne Tomasini',
+    gender: 'Male',
+    company: 'Zoovu',
+    department: 'Human Resources',
+    salary: 864341
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c188"),
+    name: 'Lindsey Sillis',
+    gender: 'Male',
+    company: 'Thoughtsphere',
+    department: 'Human Resources',
+    salary: 958972
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c261"),
+    name: 'Hazlett Defrain',
+    gender: 'Male',
+    company: 'Flipopia',
+    department: 'Human Resources',
+    salary: 1027908
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c282"),
+    name: 'Pablo Scotchforth',
+    gender: 'Male',
+    company: 'Bluejam',
+    department: 'Human Resources',
+    salary: 1033509
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c266"),
+    name: 'Jamie Conring',
+    gender: 'Male',
+    company: 'Kwideo',
+    department: 'Human Resources',
+    salary: 1057991
+  },
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c414"),
+    name: 'Fitz Paolillo',
+    gender: 'Male',
+    company: 'Photospace',
+    department: 'Human Resources',
+    salary: 1135534
+  }
+]
+Type "it" for more
+local>
+
+

@@ -1,0 +1,1609 @@
+Microsoft Windows [Version 10.0.10240]
+(c) 2015 Microsoft Corporation. All rights reserved.
+
+C:\Users\pc>mongosh
+Current Mongosh Log ID: 62d2d2b2d4cbd6efd6b6eaad
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.5.0
+Using MongoDB:          5.0.9
+Using Mongosh:          1.5.0
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2022-07-16T07:17:54.958-07:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+Warning: Found ~/.mongorc.js, but not ~/.mongoshrc.js. ~/.mongorc.js will not be loaded.
+  You may want to copy or rename ~/.mongorc.js to ~/.mongoshrc.js.
+test> use local
+switched to db local
+local> db collections
+Uncaught:
+SyntaxError: Missing semicolon. (1:2)
+
+> 1 | db collections
+    |   ^
+  2 |
+
+local> show collections
+cars
+employee_salary
+startup_log
+students_marks
+users
+local> db.cars.find()
+[
+  {
+    _id: ObjectId("5dd6325482160722dc88f2b8"),
+    name: 'Stacee Horwell',
+    email: 'shorwell0@naver.com',
+    gender: 'Male',
+    car_color: 'Purple',
+    car_make: 'Chevrolet',
+    car_model: 'G-Series G30',
+    purchase_year: '1993',
+    city: 'Sun Kunda',
+    country: 'Gambia',
+    company: 'Realcube'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2b9"),
+    name: 'Virginia Wellesley',
+    email: 'vwellesley1@house.gov',
+    gender: 'Female',
+    car_color: 'Yellow',
+    car_make: 'Audi',
+    car_model: 'A6',
+    purchase_year: '1999',
+    city: 'Xaçmaz',
+    country: 'Azerbaijan',
+    company: 'Youspan'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2ba"),
+    name: 'Sascha Bussons',
+    email: 'sbussons2@myspace.com',
+    gender: 'Male',
+    car_color: 'Maroon',
+    car_make: 'Pontiac',
+    car_model: '6000',
+    purchase_year: '1985',
+    city: 'Borisovka',
+    country: 'Russia',
+    company: 'Janyx'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2bb"),
+    name: 'Millisent St Clair',
+    email: 'mst3@cocolog-nifty.com',
+    gender: 'Female',
+    car_color: 'Red',
+    car_make: 'Buick',
+    car_model: 'LeSabre',
+    purchase_year: '1999',
+    city: 'Oljoq',
+    country: 'China',
+    company: 'Jetwire'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2bc"),
+    name: 'Giselle Goschalk',
+    email: 'ggoschalk4@sfgate.com',
+    gender: 'Female',
+    car_color: 'Yellow',
+    car_make: 'Jeep',
+    car_model: 'Patriot',
+    purchase_year: '2008',
+    city: 'Dasht-e Archi',
+    country: 'Afghanistan',
+    company: 'Eabox'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2bd"),
+    name: 'Brook Ruberti',
+    email: 'bruberti5@hhs.gov',
+    gender: 'Male',
+    car_color: 'Goldenrod',
+    car_make: 'Pontiac',
+    car_model: 'Grand Prix',
+    purchase_year: '1975',
+    city: 'Qasr Hallal',
+    country: 'Tunisia',
+    company: 'Eamia'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2be"),
+    name: 'Brande Tanslie',
+    email: 'btanslie6@cdc.gov',
+    gender: 'Female',
+    car_color: 'Purple',
+    car_make: 'GMC',
+    car_model: 'Sierra 2500HD',
+    purchase_year: '2006',
+    city: 'Poddebice',
+    country: 'Poland',
+    company: 'Kanoodle'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2bf"),
+    name: 'Harmonie Shrubb',
+    email: 'hshrubb7@soundcloud.com',
+    gender: 'Female',
+    car_color: 'Violet',
+    car_make: 'Chevrolet',
+    car_model: 'Impala',
+    purchase_year: '2012',
+    city: 'Denpasar',
+    country: 'Indonesia',
+    company: 'Bubblebox'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c0"),
+    name: 'Hershel Cumbers',
+    email: 'hcumbers8@nps.gov',
+    gender: 'Male',
+    car_color: 'Maroon',
+    car_make: 'Ford',
+    car_model: 'E250',
+    purchase_year: '2010',
+    city: 'Taihua',
+    country: 'China',
+    company: 'Dynazzy'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c1"),
+    name: 'Dore Kennelly',
+    email: 'dkennelly9@mayoclinic.com',
+    gender: 'Male',
+    car_color: 'Aquamarine',
+    car_make: 'Jeep',
+    car_model: 'Comanche',
+    purchase_year: '1992',
+    city: 'Osiek',
+    country: 'Poland',
+    company: 'Linktype'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c2"),
+    name: 'Theodosia Pagnin',
+    email: 'tpagnina@unc.edu',
+    gender: 'Female',
+    car_color: 'Fuscia',
+    car_make: 'Chevrolet',
+    car_model: 'Silverado',
+    purchase_year: '2010',
+    city: 'Cikalong',
+    country: 'Indonesia',
+    company: 'Ntags'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c3"),
+    name: 'Sheppard Sambedge',
+    email: 'ssambedgeb@xrea.com',
+    gender: 'Male',
+    car_color: 'Puce',
+    car_make: 'Audi',
+    car_model: 'A4',
+    purchase_year: '2002',
+    city: 'Khao Wong',
+    country: 'Thailand',
+    company: 'Podcat'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c4"),
+    name: 'Hilarius Gilbey',
+    email: 'hgilbeyc@reuters.com',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'Lincoln',
+    car_model: 'LS',
+    purchase_year: '2001',
+    city: 'Pánormos',
+    country: 'Greece',
+    company: 'Kwinu'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c5"),
+    name: 'Burnaby Munkley',
+    email: 'bmunkleyd@altervista.org',
+    gender: 'Male',
+    car_color: 'Violet',
+    car_make: 'Lexus',
+    car_model: 'GS',
+    purchase_year: '2000',
+    city: 'Anguil',
+    country: 'Argentina',
+    company: 'Dabfeed'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c6"),
+    name: 'Nathan Hardeman',
+    email: 'nhardemane@msn.com',
+    gender: 'Male',
+    car_color: 'Yellow',
+    car_make: 'Volkswagen',
+    car_model: 'Beetle',
+    purchase_year: '1967',
+    city: 'Paris La Défense',
+    country: 'France',
+    company: 'Voonix'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c7"),
+    name: 'Ophelie Molloy',
+    email: 'omolloyf@mapy.cz',
+    gender: 'Female',
+    car_color: 'Yellow',
+    car_make: 'Porsche',
+    car_model: 'Cayenne',
+    purchase_year: '2013',
+    city: 'Srbica',
+    country: 'Macedonia',
+    company: 'Skyble'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c8"),
+    name: 'Charley Gloucester',
+    email: 'cgloucesterg@last.fm',
+    gender: 'Male',
+    car_color: 'Fuscia',
+    car_make: 'Hyundai',
+    car_model: 'Tucson',
+    purchase_year: '2009',
+    city: 'Rawa',
+    country: 'Indonesia',
+    company: 'Yotz'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c9"),
+    name: 'Kennedy Hutcheon',
+    email: 'khutcheonh@dot.gov',
+    gender: 'Male',
+    car_color: 'Purple',
+    car_make: 'Dodge',
+    car_model: 'Caravan',
+    purchase_year: '2009',
+    city: 'Bajitpur',
+    country: 'Bangladesh',
+    company: 'Zoomlounge'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2ca"),
+    name: 'Chryste Ninnoli',
+    email: 'cninnolii@aol.com',
+    gender: 'Female',
+    car_color: 'Goldenrod',
+    car_make: 'Pontiac',
+    car_model: 'Aztek',
+    purchase_year: '2003',
+    city: 'Varennes',
+    country: 'Canada',
+    company: 'Lazzy'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2cb"),
+    name: 'Zachariah Revington',
+    email: 'zrevingtonj@berkeley.edu',
+    gender: 'Male',
+    car_color: 'Blue',
+    car_make: 'Fiat',
+    car_model: '500',
+    purchase_year: '2012',
+    city: 'Proença-a-Nova',
+    country: 'Portugal',
+    company: 'Fadeo'
+  }
+]
+Type "it" for more
+local> db.cars.find({gender:"Male",car_color:"Pink"})
+[
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c4"),
+    name: 'Hilarius Gilbey',
+    email: 'hgilbeyc@reuters.com',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'Lincoln',
+    car_model: 'LS',
+    purchase_year: '2001',
+    city: 'Pánormos',
+    country: 'Greece',
+    company: 'Kwinu'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f30f"),
+    name: 'Georg Halfhyde',
+    email: 'ghalfhyde2f@blogs.com',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'Ford',
+    car_model: 'F350',
+    purchase_year: '2009',
+    city: 'Dýšina',
+    country: 'Czech Republic',
+    company: 'Fanoodle'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f317"),
+    name: 'Daniel Maybey',
+    email: 'dmaybey2n@irs.gov',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'Mazda',
+    car_model: 'MX-5',
+    purchase_year: '2005',
+    city: 'Manjakandriana',
+    country: 'Madagascar',
+    company: 'Jabberstorm'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f38c"),
+    name: 'Emery Pedrollo',
+    email: 'epedrollo5w@columbia.edu',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'Honda',
+    car_model: 'Civic',
+    purchase_year: '1994',
+    city: 'Nanton',
+    country: 'Canada',
+    company: 'Centizu'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f399"),
+    name: 'Eugenius Lenard',
+    email: 'elenard69@cyberchimps.com',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'Mazda',
+    car_model: 'B-Series Plus',
+    purchase_year: '1992',
+    city: 'Lago da Pedra',
+    country: 'Brazil',
+    company: 'Jetpulse'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f3ef"),
+    name: 'Brady Huckel',
+    email: 'bhuckel8n@cocolog-nifty.com',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'Audi',
+    car_model: 'S8',
+    purchase_year: '2008',
+    city: 'Pavlovsk',
+    country: 'Russia',
+    company: 'Myworks'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f3f6"),
+    name: 'Grannie Varey',
+    email: 'gvarey8u@nasa.gov',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'Mitsubishi',
+    car_model: 'Endeavor',
+    purchase_year: '2004',
+    city: 'Viterbo',
+    country: 'Colombia',
+    company: 'Centizu'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f441"),
+    name: 'Kenn Speddin',
+    email: 'kspeddinax@networksolutions.com',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'BMW',
+    car_model: 'X5 M',
+    purchase_year: '2012',
+    city: 'Opol',
+    country: 'Philippines',
+    company: 'Zoomlounge'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f45a"),
+    name: 'Art Nugent',
+    email: 'anugentbm@diigo.com',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'Bentley',
+    car_model: 'Azure',
+    purchase_year: '2008',
+    city: 'Satte',
+    country: 'Japan',
+    company: 'Skalith'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f49d"),
+    name: 'Micky Gossington',
+    email: 'mgossingtondh@jalbum.net',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'Toyota',
+    car_model: 'T100',
+    purchase_year: '1995',
+    city: 'Karangnongko',
+    country: 'Indonesia',
+    company: 'Meezzy'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f4b6"),
+    name: 'Claudell Beamish',
+    email: 'cbeamishe6@desdev.cn',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'Lexus',
+    car_model: 'LX',
+    purchase_year: '2004',
+    city: 'Mayuan',
+    country: 'China',
+    company: 'Gabvine'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f4c0"),
+    name: 'Nobie Belshaw',
+    email: 'nbelshaweg@huffingtonpost.com',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'Ford',
+    car_model: 'Taurus',
+    purchase_year: '1988',
+    city: 'Zangzhai',
+    country: 'China',
+    company: 'Aibox'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f503"),
+    name: 'Dov Abramowitz',
+    email: 'dabramowitzgb@un.org',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'GMC',
+    car_model: 'Sonoma Club Coupe',
+    purchase_year: '1997',
+    city: 'Wujiashan',
+    country: 'China',
+    company: 'Youopia'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f561"),
+    name: 'Bjorn Sikorsky',
+    email: 'bsikorskyix@smh.com.au',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'Ford',
+    car_model: 'Windstar',
+    purchase_year: '1998',
+    city: 'San Onofre',
+    country: 'Colombia',
+    company: 'Kwinu'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f594"),
+    name: 'Bat Ratazzi',
+    email: 'bratazzikc@technorati.com',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'Kia',
+    car_model: 'Sportage',
+    purchase_year: '2001',
+    city: 'Beauvais',
+    country: 'France',
+    company: 'Yambee'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f5b3"),
+    name: 'Kinnie Dayley',
+    email: 'kdayleyl7@oaic.gov.au',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'Ford',
+    car_model: 'Lightning',
+    purchase_year: '1994',
+    city: 'Augusto Corrêa',
+    country: 'Brazil',
+    company: 'Quinu'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f5e1"),
+    name: 'Bevin Hastler',
+    email: 'bhastlermh@theguardian.com',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'Pontiac',
+    car_model: 'G8',
+    purchase_year: '2008',
+    city: 'San Julian',
+    country: 'Bolivia',
+    company: 'Thoughtblab'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f5ed"),
+    name: 'Nickolaus Wetter',
+    email: 'nwettermt@google.ca',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'BMW',
+    car_model: 'X3',
+    purchase_year: '2012',
+    city: 'Springbok',
+    country: 'South Africa',
+    company: 'Skyvu'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f603"),
+    name: 'Sebastian MacGillivrie',
+    email: 'smacgillivrienf@usnews.com',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'Chevrolet',
+    car_model: 'Suburban 2500',
+    purchase_year: '2003',
+    city: 'Chekhov',
+    country: 'Russia',
+    company: 'Dynazzy'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f60a"),
+    name: 'Bard Staining',
+    email: 'bstainingnm@latimes.com',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'GMC',
+    car_model: 'Savana 2500',
+    purchase_year: '2011',
+    city: 'Carigara',
+    country: 'Philippines',
+    company: 'Vipe'
+  }
+]
+Type "it" for more
+local> db.cars.find({gender:"Female",$or:[{car_color:"Red"},{car_color:"Blue"}]})
+[
+  {
+    _id: ObjectId("5dd6325482160722dc88f2bb"),
+    name: 'Millisent St Clair',
+    email: 'mst3@cocolog-nifty.com',
+    gender: 'Female',
+    car_color: 'Red',
+    car_make: 'Buick',
+    car_model: 'LeSabre',
+    purchase_year: '1999',
+    city: 'Oljoq',
+    country: 'China',
+    company: 'Jetwire'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2e7"),
+    name: 'Olenka Hattiff',
+    email: 'ohattiff1b@prlog.org',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Jeep',
+    car_model: 'Grand Cherokee',
+    purchase_year: '2011',
+    city: 'Bilajer',
+    country: 'Azerbaijan',
+    company: 'Camido'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2f7"),
+    name: 'Goldina Twinn',
+    email: 'gtwinn1r@state.tx.us',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Buick',
+    car_model: 'Riviera',
+    purchase_year: '1998',
+    city: 'Podgórzyn',
+    country: 'Poland',
+    company: 'Quatz'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f300"),
+    name: 'Kayla McSwan',
+    email: 'kmcswan20@ezinearticles.com',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Land Rover',
+    car_model: 'Discovery Series II',
+    purchase_year: '1999',
+    city: 'Raofeng',
+    country: 'China',
+    company: 'Meevee'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f330"),
+    name: 'Charity Gask',
+    email: 'cgask3c@seesaa.net',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Chrysler',
+    car_model: 'LHS',
+    purchase_year: '1994',
+    city: 'Antsirabe',
+    country: 'Madagascar',
+    company: 'Agimba'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f337"),
+    name: 'Agneta Solman',
+    email: 'asolman3j@jiathis.com',
+    gender: 'Female',
+    car_color: 'Red',
+    car_make: 'Pontiac',
+    car_model: '1000',
+    purchase_year: '1986',
+    city: 'Cliza',
+    country: 'Bolivia',
+    company: 'Kaymbo'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f375"),
+    name: 'Eveline Gowdridge',
+    email: 'egowdridge59@domainmarket.com',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Dodge',
+    car_model: 'Ram 1500 Club',
+    purchase_year: '2000',
+    city: 'Barra do Garças',
+    country: 'Brazil',
+    company: 'Jaxspan'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f38b"),
+    name: 'Babette Ely',
+    email: 'bely5v@mozilla.com',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Mercedes-Benz',
+    car_model: 'R-Class',
+    purchase_year: '2010',
+    city: 'La Estancia',
+    country: 'Honduras',
+    company: 'Yoveo'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f392"),
+    name: 'Frayda Grzeszczak',
+    email: 'fgrzeszczak62@oakley.com',
+    gender: 'Female',
+    car_color: 'Red',
+    car_make: 'Aston Martin',
+    car_model: 'Vantage',
+    purchase_year: '2011',
+    city: '?ajjah',
+    country: 'Palestinian Territory',
+    company: 'Tazz'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f3bc"),
+    name: 'Laurene Follet',
+    email: 'lfollet78@clickbank.net',
+    gender: 'Female',
+    car_color: 'Red',
+    car_make: 'Chevrolet',
+    car_model: 'Suburban 2500',
+    purchase_year: '1998',
+    city: 'Novomoskovs’k',
+    country: 'Ukraine',
+    company: 'Zava'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f3d3"),
+    name: 'Donica Braunter',
+    email: 'dbraunter7v@live.com',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Mercury',
+    car_model: 'Topaz',
+    purchase_year: '1987',
+    city: 'São Pedro',
+    country: 'Portugal',
+    company: 'Twitterbeat'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f3d8"),
+    name: 'Mariam Attril',
+    email: 'mattril80@furl.net',
+    gender: 'Female',
+    car_color: 'Red',
+    car_make: 'Toyota',
+    car_model: 'Tacoma Xtra',
+    purchase_year: '1998',
+    city: 'Mbala',
+    country: 'Zambia',
+    company: 'Ainyx'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f3f2"),
+    name: 'Veradis Fillgate',
+    email: 'vfillgate8q@umich.edu',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Bentley',
+    car_model: 'Continental GT',
+    purchase_year: '2008',
+    city: 'Loangmaka',
+    country: 'Indonesia',
+    company: 'Skynoodle'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f3fb"),
+    name: 'Andeee Marklin',
+    email: 'amarklin8z@sogou.com',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Chevrolet',
+    car_model: 'Cobalt',
+    purchase_year: '2008',
+    city: 'Portsmouth',
+    country: 'Dominica',
+    company: 'Browsetype'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f3ff"),
+    name: 'Diannne Haydock',
+    email: 'dhaydock93@pagesperso-orange.fr',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Suzuki',
+    car_model: 'XL-7',
+    purchase_year: '2005',
+    city: 'Obsharovka',
+    country: 'Russia',
+    company: 'Mita'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f404"),
+    name: 'Dianna Northey',
+    email: 'dnorthey98@google.cn',
+    gender: 'Female',
+    car_color: 'Red',
+    car_make: 'Mitsubishi',
+    car_model: 'Raider',
+    purchase_year: '2009',
+    city: 'Kamenný Prívoz',
+    country: 'Czech Republic',
+    company: 'Agivu'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f413"),
+    name: 'Jewell Tackell',
+    email: 'jtackell9n@symantec.com',
+    gender: 'Female',
+    car_color: 'Red',
+    car_make: 'Chevrolet',
+    car_model: 'Suburban',
+    purchase_year: '2010',
+    city: 'Sison',
+    country: 'Philippines',
+    company: 'Roombo'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f418"),
+    name: 'Matti Wehnerr',
+    email: 'mwehnerr9s@is.gd',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'GMC',
+    car_model: 'Rally Wagon G3500',
+    purchase_year: '1995',
+    city: 'Nor Yerznka',
+    country: 'Armenia',
+    company: 'Muxo'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f43c"),
+    name: 'Kipp Moodey',
+    email: 'kmoodeyas@wikispaces.com',
+    gender: 'Female',
+    car_color: 'Red',
+    car_make: 'Mitsubishi',
+    car_model: 'Eclipse',
+    purchase_year: '1989',
+    city: 'Tongyang',
+    country: 'China',
+    company: 'Jabberbean'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f440"),
+    name: 'Lauralee Fripp',
+    email: 'lfrippaw@mediafire.com',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Toyota',
+    car_model: 'Avalon',
+    purchase_year: '1996',
+    city: 'Qukou',
+    country: 'China',
+    company: 'Divape'
+  }
+]
+Type "it" for more
+local> db.cars.find({gender:"Male",purchase_year:"1998"})
+[
+  {
+    _id: ObjectId("5dd6325482160722dc88f2f5"),
+    name: 'Joe Booeln',
+    email: 'jbooeln1p@shutterfly.com',
+    gender: 'Male',
+    car_color: 'Fuscia',
+    car_make: 'Ford',
+    car_model: 'Escort',
+    purchase_year: '1998',
+    city: "'s-Hertogenbosch",
+    country: 'Netherlands',
+    company: 'Tanoodle'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f316"),
+    name: 'Robbie Jorio',
+    email: 'rjorio2m@google.com.au',
+    gender: 'Male',
+    car_color: 'Fuscia',
+    car_make: 'Oldsmobile',
+    car_model: 'Silhouette',
+    purchase_year: '1998',
+    city: 'Guilhabreu',
+    country: 'Portugal',
+    company: 'Meemm'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f31b"),
+    name: 'Augustin Border',
+    email: 'aborder2r@reddit.com',
+    gender: 'Male',
+    car_color: 'Purple',
+    car_make: 'Ford',
+    car_model: 'F250',
+    purchase_year: '1998',
+    city: 'Huasahuasi',
+    country: 'Peru',
+    company: 'Babblestorm'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f362"),
+    name: 'Dom Forre',
+    email: 'dforre4q@networkadvertising.org',
+    gender: 'Male',
+    car_color: 'Crimson',
+    car_make: 'Lincoln',
+    car_model: 'Navigator',
+    purchase_year: '1998',
+    city: 'New York City',
+    country: 'United States',
+    company: 'JumpXS'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f374"),
+    name: 'Conrad Venner',
+    email: 'cvenner58@bloomberg.com',
+    gender: 'Male',
+    car_color: 'Purple',
+    car_make: 'Saab',
+    car_model: '900',
+    purchase_year: '1998',
+    city: 'Pinghu',
+    country: 'China',
+    company: 'Blogtags'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f3f0"),
+    name: 'Georgy Roakes',
+    email: 'groakes8o@mediafire.com',
+    gender: 'Male',
+    car_color: 'Aquamarine',
+    car_make: 'Chevrolet',
+    car_model: 'G-Series 3500',
+    purchase_year: '1998',
+    city: 'Lingmen',
+    country: 'China',
+    company: 'Devcast'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f4bd"),
+    name: 'Teodoor Gyurkovics',
+    email: 'tgyurkovicsed@people.com.cn',
+    gender: 'Male',
+    car_color: 'Crimson',
+    car_make: 'Isuzu',
+    car_model: 'Oasis',
+    purchase_year: '1998',
+    city: 'Samoljica',
+    country: 'Serbia',
+    company: 'Wikido'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f4ca"),
+    name: 'Julius Lucey',
+    email: 'jluceyeq@taobao.com',
+    gender: 'Male',
+    car_color: 'Teal',
+    car_make: 'Volvo',
+    car_model: 'C70',
+    purchase_year: '1998',
+    city: 'Tsuruoka',
+    country: 'Japan',
+    company: 'Voonte'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f51a"),
+    name: 'Art Woollcott',
+    email: 'awoollcottgy@myspace.com',
+    gender: 'Male',
+    car_color: 'Crimson',
+    car_make: 'Ford',
+    car_model: 'Mustang',
+    purchase_year: '1998',
+    city: 'Za‘tarah',
+    country: 'Palestinian Territory',
+    company: 'Buzzdog'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f552"),
+    name: 'Zacharias Caldron',
+    email: 'zcaldronii@si.edu',
+    gender: 'Male',
+    car_color: 'Indigo',
+    car_make: 'Infiniti',
+    car_model: 'Q',
+    purchase_year: '1998',
+    city: 'Boli',
+    country: 'China',
+    company: 'Kwimbee'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f561"),
+    name: 'Bjorn Sikorsky',
+    email: 'bsikorskyix@smh.com.au',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'Ford',
+    car_model: 'Windstar',
+    purchase_year: '1998',
+    city: 'San Onofre',
+    country: 'Colombia',
+    company: 'Kwinu'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f599"),
+    name: 'Lock Bum',
+    email: 'lbumkh@indiatimes.com',
+    gender: 'Male',
+    car_color: 'Yellow',
+    car_make: 'Acura',
+    car_model: 'TL',
+    purchase_year: '1998',
+    city: 'Capelinha',
+    country: 'Brazil',
+    company: 'Bubbletube'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f5a7"),
+    name: 'Carlos Tumioto',
+    email: 'ctumiotokv@huffingtonpost.com',
+    gender: 'Male',
+    car_color: 'Teal',
+    car_make: 'Pontiac',
+    car_model: 'Bonneville',
+    purchase_year: '1998',
+    city: 'Dagushan',
+    country: 'China',
+    company: 'Skaboo'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f674"),
+    name: 'Merell Cannam',
+    email: 'mcannamqk@jigsy.com',
+    gender: 'Male',
+    car_color: 'Fuscia',
+    car_make: 'Plymouth',
+    car_model: 'Grand Voyager',
+    purchase_year: '1998',
+    city: 'Rauco',
+    country: 'Chile',
+    company: 'Skipfire'
+  }
+]
+local> db.cars.find({gender:"Female",purchase_year:"1985",car_color:"Yellow"})
+[
+  {
+    _id: ObjectId("5dd6325582160722dc88f4cc"),
+    name: 'Susann Card',
+    email: 'scardes@blogger.com',
+    gender: 'Female',
+    car_color: 'Yellow',
+    car_make: 'Pontiac',
+    car_model: 'Grand Am',
+    purchase_year: '1985',
+    city: 'Cieurih Satu',
+    country: 'Indonesia',
+    company: 'Devcast'
+  }
+]
+local> db.cars.find({gender:"Male",$or:[{$or:[{car_color:"Red"},{car_color:"Green"}],$or:[{country:"Germany"},{country:"Kenya"}]}]})
+[
+  {
+    _id: ObjectId("5dd6325582160722dc88f342"),
+    name: 'Farley Vinter',
+    email: 'fvinter3u@fc2.com',
+    gender: 'Male',
+    car_color: 'Fuscia',
+    car_make: 'Maserati',
+    car_model: 'Quattroporte',
+    purchase_year: '1984',
+    city: 'Reutlingen',
+    country: 'Germany',
+    company: 'Devcast'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f3ec"),
+    name: 'Kimball Bisson',
+    email: 'kbisson8k@pinterest.com',
+    gender: 'Male',
+    car_color: 'Purple',
+    car_make: 'Infiniti',
+    car_model: 'G37',
+    purchase_year: '2010',
+    city: 'Meru',
+    country: 'Kenya',
+    company: 'Edgewire'
+  }
+]
+local> db.cars.find({country:"india",purchase_year:"2001"})
+
+local> db.cars.find({country:"India",purchase_year:"2001"})
+
+local> db.cars.find({country:"India"})
+
+local> db.cars.find({country:"india"})
+
+local> db.cars.find({country:"india"})
+
+local> db.cars.find()
+[
+  {
+    _id: ObjectId("5dd6325482160722dc88f2b8"),
+    name: 'Stacee Horwell',
+    email: 'shorwell0@naver.com',
+    gender: 'Male',
+    car_color: 'Purple',
+    car_make: 'Chevrolet',
+    car_model: 'G-Series G30',
+    purchase_year: '1993',
+    city: 'Sun Kunda',
+    country: 'Gambia',
+    company: 'Realcube'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2b9"),
+    name: 'Virginia Wellesley',
+    email: 'vwellesley1@house.gov',
+    gender: 'Female',
+    car_color: 'Yellow',
+    car_make: 'Audi',
+    car_model: 'A6',
+    purchase_year: '1999',
+    city: 'Xaçmaz',
+    country: 'Azerbaijan',
+    company: 'Youspan'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2ba"),
+    name: 'Sascha Bussons',
+    email: 'sbussons2@myspace.com',
+    gender: 'Male',
+    car_color: 'Maroon',
+    car_make: 'Pontiac',
+    car_model: '6000',
+    purchase_year: '1985',
+    city: 'Borisovka',
+    country: 'Russia',
+    company: 'Janyx'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2bb"),
+    name: 'Millisent St Clair',
+    email: 'mst3@cocolog-nifty.com',
+    gender: 'Female',
+    car_color: 'Red',
+    car_make: 'Buick',
+    car_model: 'LeSabre',
+    purchase_year: '1999',
+    city: 'Oljoq',
+    country: 'China',
+    company: 'Jetwire'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2bc"),
+    name: 'Giselle Goschalk',
+    email: 'ggoschalk4@sfgate.com',
+    gender: 'Female',
+    car_color: 'Yellow',
+    car_make: 'Jeep',
+    car_model: 'Patriot',
+    purchase_year: '2008',
+    city: 'Dasht-e Archi',
+    country: 'Afghanistan',
+    company: 'Eabox'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2bd"),
+    name: 'Brook Ruberti',
+    email: 'bruberti5@hhs.gov',
+    gender: 'Male',
+    car_color: 'Goldenrod',
+    car_make: 'Pontiac',
+    car_model: 'Grand Prix',
+    purchase_year: '1975',
+    city: 'Qasr Hallal',
+    country: 'Tunisia',
+    company: 'Eamia'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2be"),
+    name: 'Brande Tanslie',
+    email: 'btanslie6@cdc.gov',
+    gender: 'Female',
+    car_color: 'Purple',
+    car_make: 'GMC',
+    car_model: 'Sierra 2500HD',
+    purchase_year: '2006',
+    city: 'Poddebice',
+    country: 'Poland',
+    company: 'Kanoodle'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2bf"),
+    name: 'Harmonie Shrubb',
+    email: 'hshrubb7@soundcloud.com',
+    gender: 'Female',
+    car_color: 'Violet',
+    car_make: 'Chevrolet',
+    car_model: 'Impala',
+    purchase_year: '2012',
+    city: 'Denpasar',
+    country: 'Indonesia',
+    company: 'Bubblebox'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c0"),
+    name: 'Hershel Cumbers',
+    email: 'hcumbers8@nps.gov',
+    gender: 'Male',
+    car_color: 'Maroon',
+    car_make: 'Ford',
+    car_model: 'E250',
+    purchase_year: '2010',
+    city: 'Taihua',
+    country: 'China',
+    company: 'Dynazzy'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c1"),
+    name: 'Dore Kennelly',
+    email: 'dkennelly9@mayoclinic.com',
+    gender: 'Male',
+    car_color: 'Aquamarine',
+    car_make: 'Jeep',
+    car_model: 'Comanche',
+    purchase_year: '1992',
+    city: 'Osiek',
+    country: 'Poland',
+    company: 'Linktype'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c2"),
+    name: 'Theodosia Pagnin',
+    email: 'tpagnina@unc.edu',
+    gender: 'Female',
+    car_color: 'Fuscia',
+    car_make: 'Chevrolet',
+    car_model: 'Silverado',
+    purchase_year: '2010',
+    city: 'Cikalong',
+    country: 'Indonesia',
+    company: 'Ntags'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c3"),
+    name: 'Sheppard Sambedge',
+    email: 'ssambedgeb@xrea.com',
+    gender: 'Male',
+    car_color: 'Puce',
+    car_make: 'Audi',
+    car_model: 'A4',
+    purchase_year: '2002',
+    city: 'Khao Wong',
+    country: 'Thailand',
+    company: 'Podcat'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c4"),
+    name: 'Hilarius Gilbey',
+    email: 'hgilbeyc@reuters.com',
+    gender: 'Male',
+    car_color: 'Pink',
+    car_make: 'Lincoln',
+    car_model: 'LS',
+    purchase_year: '2001',
+    city: 'Pánormos',
+    country: 'Greece',
+    company: 'Kwinu'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c5"),
+    name: 'Burnaby Munkley',
+    email: 'bmunkleyd@altervista.org',
+    gender: 'Male',
+    car_color: 'Violet',
+    car_make: 'Lexus',
+    car_model: 'GS',
+    purchase_year: '2000',
+    city: 'Anguil',
+    country: 'Argentina',
+    company: 'Dabfeed'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c6"),
+    name: 'Nathan Hardeman',
+    email: 'nhardemane@msn.com',
+    gender: 'Male',
+    car_color: 'Yellow',
+    car_make: 'Volkswagen',
+    car_model: 'Beetle',
+    purchase_year: '1967',
+    city: 'Paris La Défense',
+    country: 'France',
+    company: 'Voonix'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c7"),
+    name: 'Ophelie Molloy',
+    email: 'omolloyf@mapy.cz',
+    gender: 'Female',
+    car_color: 'Yellow',
+    car_make: 'Porsche',
+    car_model: 'Cayenne',
+    purchase_year: '2013',
+    city: 'Srbica',
+    country: 'Macedonia',
+    company: 'Skyble'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c8"),
+    name: 'Charley Gloucester',
+    email: 'cgloucesterg@last.fm',
+    gender: 'Male',
+    car_color: 'Fuscia',
+    car_make: 'Hyundai',
+    car_model: 'Tucson',
+    purchase_year: '2009',
+    city: 'Rawa',
+    country: 'Indonesia',
+    company: 'Yotz'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2c9"),
+    name: 'Kennedy Hutcheon',
+    email: 'khutcheonh@dot.gov',
+    gender: 'Male',
+    car_color: 'Purple',
+    car_make: 'Dodge',
+    car_model: 'Caravan',
+    purchase_year: '2009',
+    city: 'Bajitpur',
+    country: 'Bangladesh',
+    company: 'Zoomlounge'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2ca"),
+    name: 'Chryste Ninnoli',
+    email: 'cninnolii@aol.com',
+    gender: 'Female',
+    car_color: 'Goldenrod',
+    car_make: 'Pontiac',
+    car_model: 'Aztek',
+    purchase_year: '2003',
+    city: 'Varennes',
+    country: 'Canada',
+    company: 'Lazzy'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2cb"),
+    name: 'Zachariah Revington',
+    email: 'zrevingtonj@berkeley.edu',
+    gender: 'Male',
+    car_color: 'Blue',
+    car_make: 'Fiat',
+    car_model: '500',
+    purchase_year: '2012',
+    city: 'Proença-a-Nova',
+    country: 'Portugal',
+    company: 'Fadeo'
+  }
+]
+Type "it" for more
+local> db.cars.find({gender:"Female",car_color:"Green",country:{$not:"Pakistan"}})
+MongoServerError: $not needs a regex or a document
+local> db.cars.find({gender:"Female",car_color:"Blue"})
+[
+  {
+    _id: ObjectId("5dd6325482160722dc88f2e7"),
+    name: 'Olenka Hattiff',
+    email: 'ohattiff1b@prlog.org',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Jeep',
+    car_model: 'Grand Cherokee',
+    purchase_year: '2011',
+    city: 'Bilajer',
+    country: 'Azerbaijan',
+    company: 'Camido'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f2f7"),
+    name: 'Goldina Twinn',
+    email: 'gtwinn1r@state.tx.us',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Buick',
+    car_model: 'Riviera',
+    purchase_year: '1998',
+    city: 'Podgórzyn',
+    country: 'Poland',
+    company: 'Quatz'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f300"),
+    name: 'Kayla McSwan',
+    email: 'kmcswan20@ezinearticles.com',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Land Rover',
+    car_model: 'Discovery Series II',
+    purchase_year: '1999',
+    city: 'Raofeng',
+    country: 'China',
+    company: 'Meevee'
+  },
+  {
+    _id: ObjectId("5dd6325482160722dc88f330"),
+    name: 'Charity Gask',
+    email: 'cgask3c@seesaa.net',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Chrysler',
+    car_model: 'LHS',
+    purchase_year: '1994',
+    city: 'Antsirabe',
+    country: 'Madagascar',
+    company: 'Agimba'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f375"),
+    name: 'Eveline Gowdridge',
+    email: 'egowdridge59@domainmarket.com',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Dodge',
+    car_model: 'Ram 1500 Club',
+    purchase_year: '2000',
+    city: 'Barra do Garças',
+    country: 'Brazil',
+    company: 'Jaxspan'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f38b"),
+    name: 'Babette Ely',
+    email: 'bely5v@mozilla.com',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Mercedes-Benz',
+    car_model: 'R-Class',
+    purchase_year: '2010',
+    city: 'La Estancia',
+    country: 'Honduras',
+    company: 'Yoveo'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f3d3"),
+    name: 'Donica Braunter',
+    email: 'dbraunter7v@live.com',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Mercury',
+    car_model: 'Topaz',
+    purchase_year: '1987',
+    city: 'São Pedro',
+    country: 'Portugal',
+    company: 'Twitterbeat'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f3f2"),
+    name: 'Veradis Fillgate',
+    email: 'vfillgate8q@umich.edu',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Bentley',
+    car_model: 'Continental GT',
+    purchase_year: '2008',
+    city: 'Loangmaka',
+    country: 'Indonesia',
+    company: 'Skynoodle'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f3fb"),
+    name: 'Andeee Marklin',
+    email: 'amarklin8z@sogou.com',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Chevrolet',
+    car_model: 'Cobalt',
+    purchase_year: '2008',
+    city: 'Portsmouth',
+    country: 'Dominica',
+    company: 'Browsetype'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f3ff"),
+    name: 'Diannne Haydock',
+    email: 'dhaydock93@pagesperso-orange.fr',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Suzuki',
+    car_model: 'XL-7',
+    purchase_year: '2005',
+    city: 'Obsharovka',
+    country: 'Russia',
+    company: 'Mita'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f418"),
+    name: 'Matti Wehnerr',
+    email: 'mwehnerr9s@is.gd',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'GMC',
+    car_model: 'Rally Wagon G3500',
+    purchase_year: '1995',
+    city: 'Nor Yerznka',
+    country: 'Armenia',
+    company: 'Muxo'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f440"),
+    name: 'Lauralee Fripp',
+    email: 'lfrippaw@mediafire.com',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Toyota',
+    car_model: 'Avalon',
+    purchase_year: '1996',
+    city: 'Qukou',
+    country: 'China',
+    company: 'Divape'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f46d"),
+    name: 'Emilia Felderer',
+    email: 'efeldererc5@skype.com',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Subaru',
+    car_model: 'Loyale',
+    purchase_year: '1990',
+    city: 'Marston',
+    country: 'United Kingdom',
+    company: 'Yakidoo'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f47a"),
+    name: 'Luise Arnaut',
+    email: 'larnautci@hostgator.com',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Mazda',
+    car_model: '323',
+    purchase_year: '1995',
+    city: 'Mpigi',
+    country: 'Uganda',
+    company: 'Kare'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f48c"),
+    name: 'Leola Simyson',
+    email: 'lsimysond0@delicious.com',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'BMW',
+    car_model: '7 Series',
+    purchase_year: '2001',
+    city: 'Zhdanov',
+    country: 'Armenia',
+    company: 'Bubbletube'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f494"),
+    name: 'Patrizia Archanbault',
+    email: 'parchanbaultd8@aol.com',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Chrysler',
+    car_model: 'Concorde',
+    purchase_year: '2004',
+    city: 'Simitli',
+    country: 'Bulgaria',
+    company: 'Mybuzz'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f4a6"),
+    name: 'Hedvige Hamblin',
+    email: 'hhamblindq@harvard.edu',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Subaru',
+    car_model: 'Alcyone SVX',
+    purchase_year: '1992',
+    city: 'Las Terrenas',
+    country: 'Dominican Republic',
+    company: 'Jaxnation'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f53c"),
+    name: 'Dayle Forrester',
+    email: 'dforresterhw@themeforest.net',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Chevrolet',
+    car_model: 'Aveo',
+    purchase_year: '2009',
+    city: 'Altanbulag',
+    country: 'Mongolia',
+    company: 'Rhyloo'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f547"),
+    name: 'Freddie Ciccottini',
+    email: 'fciccottinii7@ycombinator.com',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Chevrolet',
+    car_model: 'Monte Carlo',
+    purchase_year: '2003',
+    city: 'Mikulintsy',
+    country: 'Ukraine',
+    company: 'Ainyx'
+  },
+  {
+    _id: ObjectId("5dd6325582160722dc88f58a"),
+    name: 'Ardith Daubney',
+    email: 'adaubneyk2@mediafire.com',
+    gender: 'Female',
+    car_color: 'Blue',
+    car_make: 'Saab',
+    car_model: '9-5',
+    purchase_year: '2011',
+    city: 'Néa Mákri',
+    country: 'Greece',
+    company: 'Podcat'
+  }
+]
+Type "it" for more
+local>

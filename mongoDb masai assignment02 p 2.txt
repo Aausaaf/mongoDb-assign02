@@ -1,0 +1,1264 @@
+Microsoft Windows [Version 10.0.10240]
+(c) 2015 Microsoft Corporation. All rights reserved.
+
+C:\Users\pc>mongosh
+Current Mongosh Log ID: 62d2c8eafcdfef127289c10c
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.5.0
+Using MongoDB:          5.0.9
+Using Mongosh:          1.5.0
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2022-07-16T07:17:54.958-07:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+Warning: Found ~/.mongorc.js, but not ~/.mongoshrc.js. ~/.mongorc.js will not be loaded.
+  You may want to copy or rename ~/.mongorc.js to ~/.mongoshrc.js.
+test> use local
+switched to db local
+local> show collections
+cars
+employee_salary
+startup_log
+students_marks
+users
+local> db.student_marks.find()
+
+local> db.students_marks.find()
+[
+  {
+    _id: ObjectId("5ddb87540ff16dc27fa2c4d5"),
+    name: 'Shadow Goacher',
+    gender: 'Male',
+    class: 'I',
+    section: 'B',
+    maths: 88,
+    science: 1,
+    english: 53
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4d6"),
+    name: 'Nicolais Swindles',
+    gender: 'Male',
+    class: 'IV',
+    section: 'A',
+    maths: 25,
+    science: 9,
+    english: 76
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4d7"),
+    name: 'Yovonnda Kippins',
+    gender: 'Female',
+    class: 'II',
+    section: 'A',
+    maths: 9,
+    science: 94,
+    english: 73
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4d8"),
+    name: 'Pamelina Insworth',
+    gender: 'Female',
+    class: 'V',
+    section: 'B',
+    maths: 87,
+    science: 27,
+    english: 45
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4d9"),
+    name: 'Cherianne McCluin',
+    gender: 'Female',
+    class: 'VIII',
+    section: 'C',
+    maths: 72,
+    science: 64,
+    english: 41
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4da"),
+    name: 'Karine Ickowics',
+    gender: 'Female',
+    class: 'VII',
+    section: 'C',
+    maths: 50,
+    science: 36,
+    english: 40
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4db"),
+    name: 'Nathanael Hamman',
+    gender: 'Male',
+    class: 'VII',
+    section: 'A',
+    maths: 63,
+    science: 7,
+    english: 97
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4dc"),
+    name: 'Rand Hedge',
+    gender: 'Male',
+    class: 'VI',
+    section: 'C',
+    maths: 46,
+    science: 5,
+    english: 37
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4dd"),
+    name: "Annabelle O'Clery",
+    gender: 'Female',
+    class: 'VI',
+    section: 'A',
+    maths: 55,
+    science: 4,
+    english: 29
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4de"),
+    name: 'Sherill Chapelhow',
+    gender: 'Female',
+    class: 'IV',
+    section: 'C',
+    maths: 52,
+    science: 31,
+    english: 98
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4df"),
+    name: 'Tymothy Allibone',
+    gender: 'Male',
+    class: 'II',
+    section: 'B',
+    maths: 99,
+    science: 97,
+    english: 99
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4e0"),
+    name: 'Leda Lindenblatt',
+    gender: 'Female',
+    class: 'IX',
+    section: 'C',
+    maths: 77,
+    science: 23,
+    english: 99
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4e1"),
+    name: 'Zach Lemm',
+    gender: 'Male',
+    class: 'I',
+    section: 'B',
+    maths: 54,
+    science: 87,
+    english: 48
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4e2"),
+    name: 'Cassondra Bosche',
+    gender: 'Female',
+    class: 'IX',
+    section: 'A',
+    maths: 11,
+    science: 42,
+    english: 90
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4e3"),
+    name: 'Alwyn Ramey',
+    gender: 'Male',
+    class: 'IX',
+    section: 'A',
+    maths: 30,
+    science: 21,
+    english: 48
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4e4"),
+    name: 'Sybyl Plait',
+    gender: 'Female',
+    class: 'I',
+    section: 'A',
+    maths: 1,
+    science: 9,
+    english: 39
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4e5"),
+    name: 'Minetta Madgwick',
+    gender: 'Female',
+    class: 'IV',
+    section: 'C',
+    maths: 60,
+    science: 8,
+    english: 30
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4e6"),
+    name: 'Eli Laird',
+    gender: 'Male',
+    class: 'III',
+    section: 'B',
+    maths: 56,
+    science: 22,
+    english: 38
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4e7"),
+    name: 'Alleyn Drache',
+    gender: 'Male',
+    class: 'IX',
+    section: 'C',
+    maths: 61,
+    science: 96,
+    english: 21
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4e8"),
+    name: 'Laurence Reedyhough',
+    gender: 'Male',
+    class: 'VII',
+    section: 'A',
+    maths: 7,
+    science: 21,
+    english: 95
+  }
+]
+Type "it" for more
+local> db.students_marks.find({gender:"Female"}).count()
+483
+local> db.students_marks.find({gender:"Male",maths:{$gt:85},science:{$gt:85},english:{$gt:85}})
+[
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4df"),
+    name: 'Tymothy Allibone',
+    gender: 'Male',
+    class: 'II',
+    section: 'B',
+    maths: 99,
+    science: 97,
+    english: 99
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c61b"),
+    name: 'Sinclair Fetter',
+    gender: 'Male',
+    class: 'X',
+    section: 'A',
+    maths: 86,
+    science: 96,
+    english: 96
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c7bf"),
+    name: 'Pierson Geale',
+    gender: 'Male',
+    class: 'VII',
+    section: 'B',
+    maths: 95,
+    science: 87,
+    english: 94
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c86a"),
+    name: 'Eberhard Caukill',
+    gender: 'Male',
+    class: 'VI',
+    section: 'C',
+    maths: 96,
+    science: 86,
+    english: 87
+  }
+]
+local> db.students_marks.find({gender:"Male",maths:{$gt:85},science:{$gt:85},english:{$gt:85}}).count()
+4
+local> db.students_marks.find({gender:"Male",maths:{$in:[50,75]},science:{$in:[50,75]},english:{$in:[50,75]}}).count()
+0
+local> db.students_marks.find({gender:"Male",maths:{$in:[50,75]},english:{$in:[50,75]}}).count()
+0
+local> db.students_marks.find({maths:{$in:[50,75]},english:{$in:[50,75]}}).count()
+0
+local> db.students_marks.find({maths:{$gte:50,$lte:75},english:{$gte:50,$lte:75}}).count()
+local> db.students.find({$or:[{class:"I"},{class:"II"},{class:"III"},{class:"IV"},{class:"V"}],maths:{gt:50},science:{$gt:50},{english:{$gt:50}
+Uncaught:
+SyntaxError: Unexpected token (1:119)
+
+> 1 | db.students.find({$or:[{class:"I"},{class:"II"},{class:"III"},{class:"IV"},{class:"V"}],maths:{gt:50},science:{$gt:50},{english:{$gt:50}
+    |                                                                                                                        ^
+  2 |
+
+local> db.students.find({$or:[{class:"I"},{class:"II"},{class:"III"},{class:"IV"},{class:"V"}],maths:{gt:50},science:{$gt:50},english:{$gt:50}})
+
+local> db.students.find({$or:[{class:"I"},{class:"II"},{class:"III"},{class:"IV"},{class:"V"}],maths:{$gt:50},science:{$gt:50},english:{$gt:50}})
+
+local> db.students.find({$or:[{class:"VI"}],maths:{$gt:50},science:{$gt:50},english:{$gt:50}})
+
+local> db.students_marks.find({$or:[{class:"VI"}],maths:{$gt:50},science:{$gt:50},english:{$gt:50}})
+[
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c501"),
+    name: 'Zoe Lorenz',
+    gender: 'Female',
+    class: 'VI',
+    section: 'B',
+    maths: 59,
+    science: 100,
+    english: 71
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c5c3"),
+    name: 'Cecilius Hinchon',
+    gender: 'Male',
+    class: 'VI',
+    section: 'C',
+    maths: 93,
+    science: 99,
+    english: 80
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c5c9"),
+    name: 'Osgood Singleton',
+    gender: 'Male',
+    class: 'VI',
+    section: 'A',
+    maths: 58,
+    science: 59,
+    english: 87
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c6da"),
+    name: 'Bartram Mafham',
+    gender: 'Male',
+    class: 'VI',
+    section: 'C',
+    maths: 75,
+    science: 92,
+    english: 91
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c70d"),
+    name: 'Goddart Dauncey',
+    gender: 'Male',
+    class: 'VI',
+    section: 'A',
+    maths: 57,
+    science: 100,
+    english: 51
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c747"),
+    name: 'Prudy Mayor',
+    gender: 'Female',
+    class: 'VI',
+    section: 'A',
+    maths: 91,
+    science: 90,
+    english: 64
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c7ad"),
+    name: 'Zach Sibray',
+    gender: 'Male',
+    class: 'VI',
+    section: 'B',
+    maths: 51,
+    science: 90,
+    english: 78
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c813"),
+    name: 'Edith Twiggs',
+    gender: 'Female',
+    class: 'VI',
+    section: 'B',
+    maths: 97,
+    science: 61,
+    english: 71
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c86a"),
+    name: 'Eberhard Caukill',
+    gender: 'Male',
+    class: 'VI',
+    section: 'C',
+    maths: 96,
+    science: 86,
+    english: 87
+  }
+]
+local> db.students_marks.find({$or:[{class:"I"},{class:"II"},{class:"III"},{class:"IV"},{class:"V"}],maths:{$gt:50},science:{$gt:50},english:{$gt:50}})
+[
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4df"),
+    name: 'Tymothy Allibone',
+    gender: 'Male',
+    class: 'II',
+    section: 'B',
+    maths: 99,
+    science: 97,
+    english: 99
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4ec"),
+    name: 'Channa Jovanovic',
+    gender: 'Female',
+    class: 'IV',
+    section: 'B',
+    maths: 83,
+    science: 51,
+    english: 85
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4f8"),
+    name: 'Manon Glandon',
+    gender: 'Female',
+    class: 'I',
+    section: 'B',
+    maths: 79,
+    science: 80,
+    english: 89
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4fa"),
+    name: 'Janette Neaverson',
+    gender: 'Female',
+    class: 'I',
+    section: 'C',
+    maths: 89,
+    science: 87,
+    english: 53
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c507"),
+    name: 'Sharlene Jukes',
+    gender: 'Female',
+    class: 'III',
+    section: 'A',
+    maths: 66,
+    science: 70,
+    english: 53
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c50d"),
+    name: 'Peder Terrill',
+    gender: 'Male',
+    class: 'II',
+    section: 'B',
+    maths: 70,
+    science: 98,
+    english: 98
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c52e"),
+    name: 'Jamill Menpes',
+    gender: 'Male',
+    class: 'IV',
+    section: 'C',
+    maths: 53,
+    science: 81,
+    english: 79
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c531"),
+    name: 'Jessey Jurkiewicz',
+    gender: 'Male',
+    class: 'III',
+    section: 'C',
+    maths: 84,
+    science: 87,
+    english: 91
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c538"),
+    name: 'Claudell Giamelli',
+    gender: 'Male',
+    class: 'V',
+    section: 'B',
+    maths: 95,
+    science: 73,
+    english: 59
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c559"),
+    name: 'Albertine Cline',
+    gender: 'Female',
+    class: 'I',
+    section: 'B',
+    maths: 55,
+    science: 62,
+    english: 88
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c568"),
+    name: 'Celestine Holdron',
+    gender: 'Female',
+    class: 'III',
+    section: 'A',
+    maths: 66,
+    science: 58,
+    english: 93
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c575"),
+    name: 'Meta Pennyman',
+    gender: 'Female',
+    class: 'V',
+    section: 'A',
+    maths: 81,
+    science: 88,
+    english: 96
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c577"),
+    name: 'Ravi Stud',
+    gender: 'Male',
+    class: 'I',
+    section: 'A',
+    maths: 90,
+    science: 59,
+    english: 57
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c58f"),
+    name: 'Meggy Seabrocke',
+    gender: 'Female',
+    class: 'I',
+    section: 'C',
+    maths: 91,
+    science: 52,
+    english: 74
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c597"),
+    name: 'Melamie Espasa',
+    gender: 'Female',
+    class: 'III',
+    section: 'A',
+    maths: 74,
+    science: 96,
+    english: 51
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c5a1"),
+    name: 'Towny Dayer',
+    gender: 'Male',
+    class: 'III',
+    section: 'C',
+    maths: 92,
+    science: 56,
+    english: 67
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c5a6"),
+    name: 'Mylo Paton',
+    gender: 'Male',
+    class: 'IV',
+    section: 'B',
+    maths: 97,
+    science: 53,
+    english: 87
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c5ab"),
+    name: 'Deina Thouless',
+    gender: 'Female',
+    class: 'I',
+    section: 'B',
+    maths: 95,
+    science: 76,
+    english: 68
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c5b0"),
+    name: 'Shermy Gaunson',
+    gender: 'Male',
+    class: 'V',
+    section: 'B',
+    maths: 63,
+    science: 66,
+    english: 88
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c5bb"),
+    name: 'Goldia Balden',
+    gender: 'Female',
+    class: 'II',
+    section: 'C',
+    maths: 76,
+    science: 57,
+    english: 71
+  }
+]
+Type "it" for more
+local> db.students_marks.find({gender:"Female",section:"A",maths:{$lt:25},science:{$lt:25},english:{$lt:25})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:100)
+
+> 1 | db.students_marks.find({gender:"Female",section:"A",maths:{$lt:25},science:{$lt:25},english:{$lt:25})
+    |                                                                                                     ^
+  2 |
+
+local> db.students_marks.find({gender:"Female",section:"A",maths:{$lt:25},science:{$lt:25},english:{$lt:25}})
+[
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c57d"),
+    name: 'Hildagarde MacGebenay',
+    gender: 'Female',
+    class: 'V',
+    section: 'A',
+    maths: 17,
+    science: 19,
+    english: 14
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c746"),
+    name: 'Freida Hintzer',
+    gender: 'Female',
+    class: 'III',
+    section: 'A',
+    maths: 14,
+    science: 15,
+    english: 7
+  }
+]
+local> db.students_marks.find().sort({maths:1})
+[
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4e4"),
+    name: 'Sybyl Plait',
+    gender: 'Female',
+    class: 'I',
+    section: 'A',
+    maths: 1,
+    science: 9,
+    english: 39
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c562"),
+    name: 'Brandie Impey',
+    gender: 'Female',
+    class: 'VI',
+    section: 'A',
+    maths: 1,
+    science: 50,
+    english: 99
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c569"),
+    name: 'Celisse Trye',
+    gender: 'Female',
+    class: 'VIII',
+    section: 'C',
+    maths: 1,
+    science: 87,
+    english: 72
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c56a"),
+    name: 'Melantha Havill',
+    gender: 'Female',
+    class: 'IV',
+    section: 'A',
+    maths: 1,
+    science: 15,
+    english: 99
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c5cf"),
+    name: 'Kimberli Dict',
+    gender: 'Female',
+    class: 'X',
+    section: 'A',
+    maths: 1,
+    science: 37,
+    english: 92
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c602"),
+    name: 'Vinnie Lowdeane',
+    gender: 'Male',
+    class: 'V',
+    section: 'B',
+    maths: 1,
+    science: 25,
+    english: 70
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c608"),
+    name: 'Johnnie Jakucewicz',
+    gender: 'Male',
+    class: 'IV',
+    section: 'C',
+    maths: 1,
+    science: 3,
+    english: 39
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c630"),
+    name: 'Dex Chapple',
+    gender: 'Male',
+    class: 'III',
+    section: 'A',
+    maths: 1,
+    science: 32,
+    english: 4
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c665"),
+    name: 'Doralynne Shadwick',
+    gender: 'Female',
+    class: 'IX',
+    section: 'A',
+    maths: 1,
+    science: 29,
+    english: 89
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c69e"),
+    name: 'Myrtia Goodlife',
+    gender: 'Female',
+    class: 'X',
+    section: 'C',
+    maths: 1,
+    science: 12,
+    english: 88
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c753"),
+    name: 'Urban Keely',
+    gender: 'Male',
+    class: 'I',
+    section: 'B',
+    maths: 1,
+    science: 34,
+    english: 51
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c78f"),
+    name: 'Hansiain Orniz',
+    gender: 'Male',
+    class: 'V',
+    section: 'C',
+    maths: 1,
+    science: 91,
+    english: 63
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c7df"),
+    name: 'Ivette Hoys',
+    gender: 'Female',
+    class: 'III',
+    section: 'A',
+    maths: 1,
+    science: 19,
+    english: 96
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c871"),
+    name: 'Lari Teague',
+    gender: 'Female',
+    class: 'III',
+    section: 'C',
+    maths: 1,
+    science: 15,
+    english: 51
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c50c"),
+    name: 'Raul Dole',
+    gender: 'Male',
+    class: 'X',
+    section: 'C',
+    maths: 2,
+    science: 21,
+    english: 62
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c513"),
+    name: 'Ivan Afield',
+    gender: 'Male',
+    class: 'VIII',
+    section: 'A',
+    maths: 2,
+    science: 29,
+    english: 84
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c5ba"),
+    name: 'Robbie Britt',
+    gender: 'Female',
+    class: 'I',
+    section: 'C',
+    maths: 2,
+    science: 53,
+    english: 7
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c609"),
+    name: 'Biron Samudio',
+    gender: 'Male',
+    class: 'IV',
+    section: 'C',
+    maths: 2,
+    science: 34,
+    english: 26
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c637"),
+    name: 'Win Legate',
+    gender: 'Male',
+    class: 'III',
+    section: 'A',
+    maths: 2,
+    science: 24,
+    english: 63
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c6a1"),
+    name: 'Trixie Henri',
+    gender: 'Female',
+    class: 'IV',
+    section: 'A',
+    maths: 2,
+    science: 31,
+    english: 71
+  }
+]
+Type "it" for more
+local> db.students_marks.find({section:"A",maths:{$lt:50},science:{$lt:50},english:{$lt:50}})
+[
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4e3"),
+    name: 'Alwyn Ramey',
+    gender: 'Male',
+    class: 'IX',
+    section: 'A',
+    maths: 30,
+    science: 21,
+    english: 48
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4e4"),
+    name: 'Sybyl Plait',
+    gender: 'Female',
+    class: 'I',
+    section: 'A',
+    maths: 1,
+    science: 9,
+    english: 39
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4eb"),
+    name: 'Eadith Gissop',
+    gender: 'Female',
+    class: 'III',
+    section: 'A',
+    maths: 42,
+    science: 36,
+    english: 37
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c525"),
+    name: 'Brigida McNabb',
+    gender: 'Female',
+    class: 'V',
+    section: 'A',
+    maths: 31,
+    science: 32,
+    english: 11
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c534"),
+    name: 'Perren Roche',
+    gender: 'Male',
+    class: 'III',
+    section: 'A',
+    maths: 11,
+    science: 19,
+    english: 9
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c548"),
+    name: 'Anatole Tofanelli',
+    gender: 'Male',
+    class: 'VI',
+    section: 'A',
+    maths: 18,
+    science: 36,
+    english: 4
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c54c"),
+    name: 'Denys Joll',
+    gender: 'Male',
+    class: 'IV',
+    section: 'A',
+    maths: 12,
+    science: 34,
+    english: 43
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c57c"),
+    name: 'Albertine Dovidaitis',
+    gender: 'Female',
+    class: 'V',
+    section: 'A',
+    maths: 35,
+    science: 36,
+    english: 38
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c57d"),
+    name: 'Hildagarde MacGebenay',
+    gender: 'Female',
+    class: 'V',
+    section: 'A',
+    maths: 17,
+    science: 19,
+    english: 14
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c599"),
+    name: 'Jerrie Annable',
+    gender: 'Male',
+    class: 'V',
+    section: 'A',
+    maths: 7,
+    science: 35,
+    english: 3
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c5ad"),
+    name: 'Jaquith Secretan',
+    gender: 'Female',
+    class: 'X',
+    section: 'A',
+    maths: 11,
+    science: 25,
+    english: 16
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c5f9"),
+    name: 'Faun Downgate',
+    gender: 'Female',
+    class: 'I',
+    section: 'A',
+    maths: 36,
+    science: 35,
+    english: 5
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c610"),
+    name: 'Hersch Bolderson',
+    gender: 'Male',
+    class: 'III',
+    section: 'A',
+    maths: 26,
+    science: 12,
+    english: 12
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c613"),
+    name: 'Rhett Ecob',
+    gender: 'Male',
+    class: 'VII',
+    section: 'A',
+    maths: 7,
+    science: 16,
+    english: 7
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c618"),
+    name: 'Redd Sebyer',
+    gender: 'Male',
+    class: 'VI',
+    section: 'A',
+    maths: 26,
+    science: 31,
+    english: 25
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c630"),
+    name: 'Dex Chapple',
+    gender: 'Male',
+    class: 'III',
+    section: 'A',
+    maths: 1,
+    science: 32,
+    english: 4
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c631"),
+    name: 'Putnam Claus',
+    gender: 'Male',
+    class: 'IV',
+    section: 'A',
+    maths: 29,
+    science: 10,
+    english: 43
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c644"),
+    name: 'Ollie Treffrey',
+    gender: 'Female',
+    class: 'II',
+    section: 'A',
+    maths: 36,
+    science: 21,
+    english: 14
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c655"),
+    name: 'Sofie Meates',
+    gender: 'Female',
+    class: 'V',
+    section: 'A',
+    maths: 44,
+    science: 17,
+    english: 12
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c666"),
+    name: 'Chrystel McAleese',
+    gender: 'Female',
+    class: 'II',
+    section: 'A',
+    maths: 26,
+    science: 37,
+    english: 24
+  }
+]
+Type "it" for more
+local> db.students_marks.find({section:"c",maths:{$gt:75},science:{$gt:75},english:{$gt:75}})
+
+local> db.students_marks.find({section:"",maths:{$gt:75},science:{$gt:75},english:{$gt:75}})
+local> db.students_marks.find({section:"C",maths:{$lt:50},science:{$lt:50},english:{$lt:50}})
+[
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c4dc"),
+    name: 'Rand Hedge',
+    gender: 'Male',
+    class: 'VI',
+    section: 'C',
+    maths: 46,
+    science: 5,
+    english: 37
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c51f"),
+    name: 'Lanny Robillard',
+    gender: 'Male',
+    class: 'III',
+    section: 'C',
+    maths: 38,
+    science: 12,
+    english: 44
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c535"),
+    name: 'Deck Vigors',
+    gender: 'Male',
+    class: 'V',
+    section: 'C',
+    maths: 31,
+    science: 1,
+    english: 48
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c574"),
+    name: 'Jenna Giaomozzo',
+    gender: 'Female',
+    class: 'I',
+    section: 'C',
+    maths: 21,
+    science: 25,
+    english: 1
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c593"),
+    name: 'Andris Brogiotti',
+    gender: 'Male',
+    class: 'III',
+    section: 'C',
+    maths: 26,
+    science: 28,
+    english: 35
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c596"),
+    name: 'Mischa Spawell',
+    gender: 'Male',
+    class: 'IX',
+    section: 'C',
+    maths: 30,
+    science: 31,
+    english: 27
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c59d"),
+    name: 'Lyndsey Shaves',
+    gender: 'Female',
+    class: 'VIII',
+    section: 'C',
+    maths: 24,
+    science: 10,
+    english: 42
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c5eb"),
+    name: 'Kattie Sille',
+    gender: 'Female',
+    class: 'III',
+    section: 'C',
+    maths: 41,
+    science: 28,
+    english: 28
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c5ef"),
+    name: 'Cassandry Francisco',
+    gender: 'Female',
+    class: 'VI',
+    section: 'C',
+    maths: 35,
+    science: 40,
+    english: 22
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c5f1"),
+    name: 'Paton Steutly',
+    gender: 'Male',
+    class: 'III',
+    section: 'C',
+    maths: 20,
+    science: 18,
+    english: 40
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c605"),
+    name: 'Del Mugridge',
+    gender: 'Male',
+    class: 'V',
+    section: 'C',
+    maths: 3,
+    science: 26,
+    english: 23
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c606"),
+    name: 'Zachary Benneyworth',
+    gender: 'Male',
+    class: 'VI',
+    section: 'C',
+    maths: 40,
+    science: 12,
+    english: 45
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c608"),
+    name: 'Johnnie Jakucewicz',
+    gender: 'Male',
+    class: 'IV',
+    section: 'C',
+    maths: 1,
+    science: 3,
+    english: 39
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c609"),
+    name: 'Biron Samudio',
+    gender: 'Male',
+    class: 'IV',
+    section: 'C',
+    maths: 2,
+    science: 34,
+    english: 26
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c60a"),
+    name: 'Vernon Steggals',
+    gender: 'Male',
+    class: 'I',
+    section: 'C',
+    maths: 47,
+    science: 35,
+    english: 25
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c63e"),
+    name: 'Arny Cayle',
+    gender: 'Male',
+    class: 'X',
+    section: 'C',
+    maths: 36,
+    science: 28,
+    english: 9
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c64b"),
+    name: 'Barnabas Van Giffen',
+    gender: 'Male',
+    class: 'IX',
+    section: 'C',
+    maths: 14,
+    science: 31,
+    english: 9
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c659"),
+    name: 'Mikey Lancastle',
+    gender: 'Male',
+    class: 'VIII',
+    section: 'C',
+    maths: 32,
+    science: 6,
+    english: 13
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c65c"),
+    name: 'Cirilo Sutor',
+    gender: 'Male',
+    class: 'X',
+    section: 'C',
+    maths: 8,
+    science: 16,
+    english: 49
+  },
+  {
+    _id: ObjectId("5ddb87550ff16dc27fa2c67e"),
+    name: 'Penn Tubby',
+    gender: 'Male',
+    class: 'IV',
+    section: 'C',
+    maths: 34,
+    science: 17,
+    english: 31
+  }
+]
+Type "it" for more
+local>
+
+
+
+
+
+
+
+
